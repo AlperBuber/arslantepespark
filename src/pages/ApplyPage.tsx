@@ -17,7 +17,6 @@ import {
 } from "lucide-react";
 import { toast } from "sonner";
 import logo from "@/assets/logo-mark.png";
-// @ts-expect-error JS module without type declarations
 import { supabase } from "@/lib/supabase.js";
 
 const INITIAL_FORM_DATA = {

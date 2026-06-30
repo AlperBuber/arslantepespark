@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, ExternalLink, Loader2, LogOut } from "lucide-react";
-import type { Session } from "@supabase/supabase-js";
+import type { AuthChangeEvent, Session } from "@supabase/supabase-js";
 import { toast } from "sonner";
 import logo from "@/assets/logo-mark.png";
-// @ts-expect-error JS module without type declarations
 import { supabase } from "@/lib/supabase.js";
 
 type ApplicationStatus = "yeni" | "değerlendiriliyor" | "kabul" | "red";
@@ -119,7 +118,8 @@ export default function ApplicationDetailPage() {
   const [docUrlsLoading, setDocUrlsLoading] = useState(false);
 
   useEffect(() => {
-    supabase.auth.getSession().then(({ data: { session: currentSession } }) => {
+    supabase.auth.getSession().then(({ data }: { data: { session: Session | null } }) => {
+      const currentSession = data.session;
       setSession(currentSession);
       setAuthLoading(false);
       if (!currentSession) {
@@ -129,7 +129,7 @@ export default function ApplicationDetailPage() {
 
     const {
       data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, currentSession) => {
+    } = supabase.auth.onAuthStateChange((_event: AuthChangeEvent, currentSession: Session | null) => {
       setSession(currentSession);
       if (!currentSession) {
         navigate("/management", { replace: true });

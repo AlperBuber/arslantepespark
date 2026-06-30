@@ -6,8 +6,6 @@ const mentors = Array.from({ length: 8 }).map((_, i) => ({
   org: ["Series-B SaaS", "Marketplace exit", "İstanbul VC", "Deep-tech", "Fintech unicorn", "Tüketici markası", "Melek ağı", "Kurumsal VC"][i],
 }));
 
-const investors = ["İstanbul Seed Fund", "Anadolu Ventures", "Boğaziçi Capital", "Bronze Angel Network", "Levant Growth", "Future Anatolia VC", "Spark Angels", "Heritage Capital"];
-
 export default function Mentors() {
   return (
     <Section

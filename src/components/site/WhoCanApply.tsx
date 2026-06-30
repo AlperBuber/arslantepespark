@@ -1,7 +1,6 @@
 import Section from "./Section";
 import { Check } from "lucide-react";
 
-const cities = ["Malatya", "Elazığ", "Diyarbakır", "Şanlıurfa", "Gaziantep", "Sivas", "Kayseri", "Konya", "Erzurum", "Van", "Mardin", "Adıyaman", "Kahramanmaraş"];
 const criteria = [
   "MVP'si veya ilk traction'ı olan erken aşama girişim",
   "Doğu, Güneydoğu veya İç Anadolu'da yerleşik (ya da taşınmaya açık) kurucu ekip",
