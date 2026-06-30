@@ -8,7 +8,6 @@ import { toast } from "sonner";
 import Section from "./Section";
 import logo from "@/assets/logo-mark.png";
 
-const partners = ["TÜBİTAK", "KOSGEB", "Anadolu Kalkınma Ajansı", "İnönü Üniversitesi", "İstanbul Teknopark", "Bronze Ventures"];
 const CONTACT_EMAIL = "info@bconnector.org";
 
 export default function ContactFooter() {
@@ -43,15 +42,6 @@ export default function ContactFooter() {
               <li className="flex gap-3"><MapPin className="w-5 h-5 text-bronze shrink-0 mt-0.5" /> Arslantepe Spark Merkezi · Malatya, Türkiye</li>
               <li className="flex gap-3"><Mail className="w-5 h-5 text-bronze shrink-0 mt-0.5" /> <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-bronze">{CONTACT_EMAIL}</a></li>
             </ul>
-
-            <div className="mt-10">
-              <h3 className="font-display text-lg text-charcoal mb-3">Ortaklarımız</h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-border rounded-xl overflow-hidden max-w-md">
-                {partners.map((p) => (
-                  <div key={p} className="bg-ivory aspect-[3/1] flex items-center justify-center text-xs font-medium text-charcoal/60 px-2 text-center">{p}</div>
-                ))}
-              </div>
-            </div>
           </div>
 
           <div className="bg-gradient-sand border border-border rounded-3xl p-8 md:p-10 relative overflow-hidden">
@@ -90,16 +80,13 @@ export default function ContactFooter() {
                 Arslantepe <span className="text-bronze-glow">Spark</span>
               </span>
             </div>
-            <p className="text-xs text-ivory/55 max-w-md">
-              Anadolu'nun Girişimcilik Programı — Doğu, Güneydoğu ve İç Anadolu'daki girişimcileri İstanbul'un yatırımcı ve kurumsal ortaklarıyla buluşturur. Tamamen Türkçe yürütülür.
-            </p>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 ml-auto">
               <a href="https://www.linkedin.com/company/arslantepe-spark/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-bronze-glow transition-colors"><Linkedin className="w-5 h-5" /></a>
             </div>
           </div>
           <div className="mt-8 pt-6 border-t border-ivory/10 flex flex-col md:flex-row justify-between gap-2 text-xs text-ivory/50">
             <span>© {new Date().getFullYear()} Arslantepe Spark. Tüm hakları saklıdır.</span>
-            <span>Malatya'da üretildi · Anadolu mirasıyla güçlendirildi.</span>
+            <span>By B-connector</span>
           </div>
         </div>
       </footer>

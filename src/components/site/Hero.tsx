@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useLang } from "@/i18n/LanguageContext";
-import heroAsset from "@/assets/hero-arslantepe.jpg";
+import heroAsset from "@/assets/hero-arslantepe-lions.png";
 
 export default function Hero() {
   const { t } = useLang();

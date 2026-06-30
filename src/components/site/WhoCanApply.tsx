@@ -3,12 +3,11 @@ import { Check } from "lucide-react";
 
 const criteria = [
   "MVP'si veya ilk traction'ı olan erken aşama girişim",
-  "Doğu, Güneydoğu veya İç Anadolu'da yerleşik (ya da taşınmaya açık) kurucu ekip",
   "Agritech, healthtech, deep-tech, iklim, fintech, mobilite, SaaS veya yaratıcı endüstriler alanında teknoloji odaklı girişim",
   "Pre-seed ile seed arasında — genellikle 500K USD altında yatırım almış",
   "Şirketi kurmaya tam zamanlı bağlı kurucular",
   "Mentor ve yatırımcı geri bildirimine açık, öğrenmeye istekli ekip",
-  "Türkçe yürütülen müfredat ve atölyelere katılabilecek ekip",
+  "Program boyunca tüm müfredat ve atölyelere katılabilecek ekip",
 ];
 
 export default function WhoCanApply() {
