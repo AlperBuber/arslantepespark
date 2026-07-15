@@ -10,8 +10,8 @@ const modules = [
   { w: "Hafta 7", t: "Finans & Birim Ekonomisi", d: "Cap table, runway, modelleme, LTV/CAC, yatırım matematiği." },
   { w: "Hafta 8", t: "Hukuk & Yönetişim", d: "Şirket yapısı, fikri mülkiyet, sözleşmeler, yatırımcı yönetişimi." },
   { w: "Hafta 9", t: "Yatırıma Hazırlık", d: "Sunum dosyası, veri odası, term sheet okuryazarlığı, yatırımcı hattı." },
-  { w: "Hafta 10", t: "Kurumsal İş Birlikleri", d: "Erken aşama girişimler için pilotlar, satın alma, kurumsal satış." },
-  { w: "Hafta 11", t: "İstanbul Buluşması", d: "Yatırımcı görüşmeleri, ortak atölyeleri, ekosistem derinleşmesi." },
+  { w: "Hafta 10", t: "Kurumsal İş Birlikleri", d: "Erken aşama girişimler için pilotlar, satın alma, kurumsal satış.", scaleUpOnly: true },
+  { w: "Hafta 11", t: "İstanbul Buluşması", d: "Yatırımcı görüşmeleri, ortak atölyeleri, ekosistem derinleşmesi.", scaleUpOnly: true },
   { w: "Hafta 12", t: "Demo Day", d: "Melek, VC, kurumsal ortak ve basına açık kamuya yönelik sunum günü." },
 ];
 
@@ -26,9 +26,21 @@ export default function Modules() {
     >
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-ivory/10 rounded-2xl overflow-hidden">
         {modules.map((m, i) => (
-          <div key={i} className="bg-charcoal p-6 hover:bg-charcoal/60 transition-colors duration-300 group">
+          <div
+            key={i}
+            className={`bg-charcoal p-6 hover:bg-charcoal/60 transition-colors duration-300 group relative ${
+              m.scaleUpOnly ? "border-l-2 border-bronze-glow/40" : ""
+            }`}
+          >
             <div className="flex items-center justify-between mb-3">
-              <span className="text-xs uppercase tracking-[0.2em] text-bronze-glow font-medium">{m.w}</span>
+              <div className="flex items-center gap-2">
+                <span className="text-xs uppercase tracking-[0.2em] text-bronze-glow font-medium">{m.w}</span>
+                {m.scaleUpOnly && (
+                  <span className="px-1.5 py-0.5 rounded text-[8px] font-bold uppercase tracking-wider bg-bronze-glow/15 text-bronze-glow border border-bronze-glow/20">
+                    Scale-up Özel
+                  </span>
+                )}
+              </div>
               <span className="font-display text-xl text-ivory/30 group-hover:text-bronze-glow transition-colors">{String(i + 1).padStart(2, "0")}</span>
             </div>
             <h3 className="font-display text-lg text-ivory mb-2 font-medium">{m.t}</h3>

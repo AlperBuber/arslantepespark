@@ -5,8 +5,8 @@ const stages = [
   { n: "02", t: "Seçim Kampı", d: "İlk 30 girişim, mentor ve ortaklarla 3 günlük seçim kampı için Malatya'ya davet edilir." },
   { n: "03", t: "Dönem Açılışı", d: "10–12 girişim seçilir. Arslantepe Spark Malatya merkezinde Türkçe açılış haftası." },
   { n: "04", t: "Eğitim & İnşa", d: "Yoğun Türkçe müfredat, haftalık birebir mentorluk, uygulamalı ürün ve pazara açılma sprintleri." },
-  { n: "05", t: "İstanbul Haftası", d: "Program sonunda dereceye giren girişimler yatırımcı ve kurumsal şirketler ile görüşmeler için İstanbul'a gelir." },
-  { n: "06", t: "Demo Day & Sonrası", d: "Melek, VC ve kurumsal yatırımcılara açık demo günü — ardından 6 ay süren mezun desteği." },
+  { n: "05", t: "İstanbul Haftası", d: "Program sonunda dereceye giren girişimler yatırımcı ve kurumsal şirketler ile görüşmeler için İstanbul'a gelir.", note: "Yatırımcı ve kurumsal görüşmeler yalnızca Scale-up kategorisi içindir." },
+  { n: "06", t: "Demo Day & Sonrası", d: "Melek, VC ve kurumsal yatırımcılara açık demo günü — ardından 6 ay süren mezun desteği.", note: "Yatırımcı sunumları yalnızca Scale-up kategorisi içindir." },
 ];
 
 export default function Journey() {
@@ -25,6 +25,13 @@ export default function Journey() {
               <span className="text-xs font-medium uppercase tracking-[0.2em] text-bronze">Aşama {s.n}</span>
               <h3 className="font-display text-xl font-semibold text-charcoal mt-2">{s.t}</h3>
               <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{s.d}</p>
+              {s.note && (
+                <div className="mt-4 pt-3 border-t border-border/60">
+                  <span className="text-[11px] font-medium text-bronze/80 bg-bronze/5 px-2.5 py-1 rounded inline-block">
+                    {s.note}
+                  </span>
+                </div>
+              )}
             </div>
           </li>
         ))}
