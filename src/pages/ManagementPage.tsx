@@ -5,6 +5,7 @@ import type { AuthChangeEvent, Session } from "@supabase/supabase-js";
 import { toast } from "sonner";
 import logo from "@/assets/logo-mark.png";
 import { supabase } from "@/lib/supabase.js";
+import JSZip from "jszip";
 
 type ApplicationStatus = "yeni" | "değerlendiriliyor" | "kabul" | "red";
 
@@ -168,6 +169,41 @@ function downloadCsv(apps: Application[]) {
   URL.revokeObjectURL(url);
 }
 
+function getUniqueFilename(
+  girisim: string,
+  kurucu: string,
+  suffix: string,
+  usedNames: Set<string>
+): string {
+  const rawName = `${girisim}_${kurucu}_${suffix}`;
+  
+  const trMap: Record<string, string> = {
+    'ş': 's', 'Ş': 's',
+    'ı': 'i', 'İ': 'i',
+    'ğ': 'g', 'Ğ': 'g',
+    'ü': 'u', 'Ü': 'u',
+    'ö': 'o', 'Ö': 'o',
+    'ç': 'c', 'Ç': 'c'
+  };
+  
+  let cleaned = rawName;
+  for (const key in trMap) {
+    cleaned = cleaned.replace(new RegExp(key, 'g'), trMap[key]);
+  }
+  
+  cleaned = cleaned.replace(/\s+/g, '_');
+  cleaned = cleaned.replace(/[\/\\:\*\?"<>\|]/g, '');
+  
+  let candidate = `${cleaned}.pdf`;
+  let counter = 1;
+  while (usedNames.has(candidate)) {
+    candidate = `${cleaned}_${counter}.pdf`;
+    counter++;
+  }
+  usedNames.add(candidate);
+  return candidate;
+}
+
 export default function ManagementPage() {
   const navigate = useNavigate();
 
@@ -182,6 +218,8 @@ export default function ManagementPage() {
   const [listLoading, setListLoading] = useState(false);
   const [listError, setListError] = useState("");
   const [exporting, setExporting] = useState(false);
+  const [zipLoading, setZipLoading] = useState(false);
+  const [zipProgress, setZipProgress] = useState({ current: 0, total: 0 });
 
   const [searchQuery, setSearchQuery] = useState("");
   const [statusFilter, setStatusFilter] = useState("all");
@@ -291,6 +329,128 @@ export default function ManagementPage() {
       toast.error("CSV dışa aktarımı sırasında bir hata oluştu.");
     } finally {
       setExporting(false);
+    }
+  };
+
+  const handleDownloadZip = async () => {
+    if (applications.length === 0) {
+      toast.error("İndirilecek başvuru bulunamadı.");
+      return;
+    }
+
+    setZipLoading(true);
+    setZipProgress({ current: 0, total: 0 });
+
+    try {
+      const { data, error } = await supabase
+        .from("applications")
+        .select("girisim_adi, kurucu_ad, pitch_deck_path, is_plani_path");
+
+      if (error) {
+        toast.error(`Başvurular çekilemedi: ${error.message}`);
+        setZipLoading(false);
+        return;
+      }
+
+      if (!data || data.length === 0) {
+        toast.error("İndirilecek başvuru kaydı bulunamadı.");
+        setZipLoading(false);
+        return;
+      }
+
+      interface ApplicationDoc {
+        girisim_adi: string;
+        kurucu_ad: string;
+        pitch_deck_path: string;
+        is_plani_path: string | null;
+      }
+
+      const apps = data as ApplicationDoc[];
+      const filesToDownload: { girisim_adi: string; kurucu_ad: string; path: string; suffix: string }[] = [];
+
+      for (const app of apps) {
+        if (app.pitch_deck_path) {
+          filesToDownload.push({
+            girisim_adi: app.girisim_adi,
+            kurucu_ad: app.kurucu_ad,
+            path: app.pitch_deck_path,
+            suffix: "pitch-deck",
+          });
+        }
+        if (app.is_plani_path) {
+          filesToDownload.push({
+            girisim_adi: app.girisim_adi,
+            kurucu_ad: app.kurucu_ad,
+            path: app.is_plani_path,
+            suffix: "is-plani",
+          });
+        }
+      }
+
+      if (filesToDownload.length === 0) {
+        toast.error("İndirilecek herhangi bir PDF belgesi bulunamadı.");
+        setZipLoading(false);
+        return;
+      }
+
+      const zip = new JSZip();
+      const usedNames = new Set<string>();
+      let failedCount = 0;
+
+      setZipProgress({ current: 0, total: filesToDownload.length });
+
+      for (let i = 0; i < filesToDownload.length; i++) {
+        const fileInfo = filesToDownload[i];
+        try {
+          const { data: signedData, error: signedError } = await supabase.storage
+            .from("basvuru-belgeler")
+            .createSignedUrl(fileInfo.path, 3600);
+
+          if (signedError || !signedData?.signedUrl) {
+            throw new Error(signedError?.message || "Signed URL alınamadı.");
+          }
+
+          const response = await fetch(signedData.signedUrl);
+          if (!response.ok) {
+            throw new Error(`İndirme hatası (HTTP ${response.status})`);
+          }
+
+          const blob = await response.blob();
+          const filename = getUniqueFilename(fileInfo.girisim_adi, fileInfo.kurucu_ad, fileInfo.suffix, usedNames);
+          zip.file(filename, blob);
+        } catch (err) {
+          console.error(`Belge indirilemedi (${fileInfo.path}):`, err);
+          failedCount++;
+        }
+
+        setZipProgress((prev) => ({ ...prev, current: i + 1 }));
+      }
+
+      if (Object.keys(zip.files).length === 0) {
+        toast.error("Hiçbir PDF belgesi başarıyla indirilemedi. Boş ZIP oluşturulamaz.");
+        setZipLoading(false);
+        return;
+      }
+
+      const content = await zip.generateAsync({ type: "blob" });
+      const url = URL.createObjectURL(content);
+      const link = document.createElement("a");
+      const date = new Date().toISOString().slice(0, 10);
+      link.href = url;
+      link.download = `arslantepe-spark-belgeler-${date}.zip`;
+      link.click();
+      URL.revokeObjectURL(url);
+
+      if (failedCount > 0) {
+        toast.warning(`${failedCount} adet belge indirilemedi ve ZIP'e eklenemedi.`);
+      } else {
+        toast.success("Tüm belgeler başarıyla indirildi ve ZIP oluşturuldu.");
+      }
+    } catch (err) {
+      console.error("ZIP oluşturulurken genel bir hata oluştu:", err);
+      toast.error("ZIP oluşturulurken beklenmeyen bir hata oluştu.");
+    } finally {
+      setZipLoading(false);
     }
   };
 
@@ -412,6 +572,15 @@ export default function ManagementPage() {
                 >
                   {exporting ? <Loader2 className="w-4 h-4 animate-spin" /> : <Download className="w-4 h-4" />}
                   Excel&apos;e Aktar (CSV)
+                </button>
+                <button
+                  type="button"
+                  onClick={handleDownloadZip}
+                  disabled={zipLoading || listLoading || applications.length === 0}
+                  className="inline-flex items-center justify-center gap-2 text-sm font-medium px-4 py-2 rounded-full border border-border bg-secondary hover:bg-secondary/80 transition-colors disabled:opacity-50"
+                >
+                  {zipLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Download className="w-4 h-4" />}
+                  {zipLoading ? `Belgeler hazırlanıyor... ${zipProgress.current} / ${zipProgress.total}` : "Belgeleri İndir (ZIP)"}
                 </button>
                 <button
                   type="button"
