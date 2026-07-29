@@ -6,9 +6,11 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import Section from "./Section";
-import logo from "@/assets/logo-mark.png";
+import logo from "@/assets/logo-full.png";
+import bconnectorLogo from "@/assets/bconnector-logo.png";
 
 const CONTACT_EMAIL = "info@bconnector.org";
+const BCONNECTOR_URL = "https://bconnector.org";
 
 export default function ContactFooter() {
   const [name, setName] = useState("");
@@ -74,19 +76,27 @@ export default function ContactFooter() {
       <footer className="bg-charcoal text-ivory/75 py-12">
         <div className="container">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-            <div className="flex items-center gap-2.5">
-              <img src={logo} alt="" className="w-8 h-8 brightness-125" width={32} height={32} loading="lazy" />
-              <span className="font-display text-base font-semibold text-ivory">
-                Arslantepe <span className="text-bronze-glow">Spark</span>
-              </span>
+            <div className="flex items-center">
+              <img src={logo} alt="Arslantepe Spark — Girişim Hızlandırma Programı" className="h-9 w-auto object-contain" width={463} height={93} loading="lazy" />
             </div>
             <div className="flex items-center gap-4 ml-auto">
               <a href="https://www.linkedin.com/company/arslantepe-spark/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-bronze-glow transition-colors"><Linkedin className="w-5 h-5" /></a>
             </div>
           </div>
-          <div className="mt-8 pt-6 border-t border-ivory/10 flex flex-col md:flex-row justify-between gap-2 text-xs text-ivory/50">
+          <div className="mt-8 pt-6 border-t border-ivory/10 flex flex-col md:flex-row md:items-center justify-between gap-3 text-xs text-ivory/50">
             <span>© {new Date().getFullYear()} Arslantepe Spark. Tüm hakları saklıdır.</span>
-            <span>By B-connector</span>
+            <span className="flex items-center gap-2">
+              By
+              <a
+                href={BCONNECTOR_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="B-Connector"
+                className="inline-flex items-center rounded-md bg-ivory px-2 py-1.5 transition-opacity hover:opacity-80"
+              >
+                <img src={bconnectorLogo} alt="B-Connector" className="h-5 w-auto object-contain" width={180} height={60} loading="lazy" />
+              </a>
+            </span>
           </div>
         </div>
       </footer>

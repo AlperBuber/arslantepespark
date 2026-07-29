@@ -2,8 +2,8 @@ import Section from "./Section";
 
 const mentors = Array.from({ length: 8 }).map((_, i) => ({
   name: `Mentor ${i + 1}`,
-  role: ["Seri Girişimci", "Büyüme Operatörü", "VC Ortağı", "CTO", "Ürün Lideri", "Marka Stratejisti", "Melek Yatırımcı", "Kurumsal VC"][i],
-  org: ["Series-B SaaS", "Marketplace exit", "İstanbul VC", "Deep-tech", "Fintech unicorn", "Tüketici markası", "Melek ağı", "Kurumsal VC"][i],
+  role: ["Seri Girişimci", "Büyüme Operatörü", "VC Ortağı", "CTO (Teknoloji Direktörü)", "Ürün Lideri", "Marka Stratejisti", "Melek Yatırımcı", "Kurumsal VC"][i],
+  org: ["B Serisi (2. büyük yatırım turu) bulut yazılım hizmetleri", "Başarılı girişim satışı", "İstanbul VC", "Derin teknoloji", "Finansal teknoloji unicorn (1 milyar dolarlık girişim)", "Tüketici markası", "Melek yatırımcı ağı", "Kurumsal VC"][i],
 }));
 
 export default function Mentors() {

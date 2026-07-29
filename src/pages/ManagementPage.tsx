@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Download, Loader2, LogOut, Search, Shield } from "lucide-react";
 import type { AuthChangeEvent, Session } from "@supabase/supabase-js";
 import { toast } from "sonner";
-import logo from "@/assets/logo-mark.png";
+import logo from "@/assets/logo-lion.png";
 import { supabase } from "@/lib/supabase.js";
 import JSZip from "jszip";
 

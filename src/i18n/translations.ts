@@ -19,8 +19,6 @@ export const translations = {
       cta2: "Programı İncele",
       stat1: "12 Hafta",
       stat1Label: "Yoğun Müfredat",
-      stat2: "13 İl",
-      stat2Label: "Bölgesel Erişim",
     },
   },
   en: {
@@ -43,8 +41,6 @@ export const translations = {
       cta2: "Explore Program",
       stat1: "12 Weeks",
       stat1Label: "Intensive Curriculum",
-      stat2: "13 Cities",
-      stat2Label: "Regional Access",
     },
   },
 };

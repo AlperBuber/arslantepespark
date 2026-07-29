@@ -16,7 +16,7 @@ import {
   AlertCircle 
 } from "lucide-react";
 import { toast } from "sonner";
-import logo from "@/assets/logo-mark.png";
+import logo from "@/assets/logo-full.png";
 import { supabase } from "@/lib/supabase.js";
 
 const INITIAL_FORM_DATA = {
@@ -77,8 +77,8 @@ const TURKISH_CITIES = [
 ];
 
 const SECTORS_TAGS = [
-  "Fintech", 
-  "Oyun (Gaming)", 
+  "Finansal Teknolojiler (Fintech)",
+  "Oyun (Gaming)",
   "Yapay Zekâ (AI)", 
   "Perakende (Retail)", 
   "Endüstri 4.0", 
@@ -97,7 +97,7 @@ const STEPS = [
   { id: 3, title: "Problem & Fırsat", desc: "Piyasadaki açık" },
   { id: 4, title: "Çözüm & Ürün", desc: "Ürün ve özellikler" },
   { id: 5, title: "Pazar & İş Modeli", desc: "Pazar ve gelir" },
-  { id: 6, title: "Çekiş & Doğrulama", desc: "Traction ve müşteri" },
+  { id: 6, title: "İlk Müşteri İlgisi & Doğrulama", desc: "İlk müşteri ilgisi" },
   { id: 7, title: "Motivasyon & Uyum", desc: "Programa katılım" },
   { id: 8, title: "Belgeler & Gönder", desc: "Sunum ve dosyalar" }
 ];
@@ -514,7 +514,7 @@ Tahmini Pazar Büyüklüğü: ${summary.marketSize || "Belirtilmedi"}
 Gelir Modeli: ${summary.revenueModel}
 Ölçeklenebilirlik Nedeni: ${summary.scalabilityReason}
 
-BÖLÜM 6 — ÇEKİŞ (TRACTION) VE DOĞRULAMA
+BÖLÜM 6 — İLK MÜŞTERİ İLGİSİ VE DOĞRULAMA
 -----------------------------------------------------------
 Mevcut Müşteri ve Gelir: ${summary.tractionMvp}
 Müşterilerle Görüşüldü mü?: ${summary.hasSpokenToCustomers}
@@ -560,11 +560,8 @@ içerisinde sizinle iletişime geçecektir. Başvurunuz için teşekkürler!
       {/* Header */}
       <header className="sticky top-0 z-40 bg-ivory/80 backdrop-blur-md border-b border-border shadow-soft">
         <div className="container flex items-center justify-between h-16 md:h-20">
-          <Link to="/" className="flex items-center gap-3 group">
-            <img src={logo} alt="Arslantepe Spark" className="w-10 h-10 md:w-12 md:h-12 object-contain" width={48} height={48} />
-            <span className="font-display text-base md:text-lg font-semibold tracking-tight text-bronze whitespace-nowrap">
-              Arslantepe Spark
-            </span>
+          <Link to="/" className="flex items-center group">
+            <img src={logo} alt="Arslantepe Spark — Girişim Hızlandırma Programı" className="h-8 md:h-10 w-auto object-contain" width={463} height={93} />
           </Link>
           <Link 
             to="/" 
@@ -854,7 +851,7 @@ içerisinde sizinle iletişime geçecektir. Başvurunuz için teşekkürler!
                           <div className="md:col-span-2 bg-secondary/50 p-4 rounded-2xl border border-border/50 text-[11px] md:text-xs text-charcoal/70 flex items-start gap-2.5">
                             <AlertCircle className="w-4 h-4 text-bronze shrink-0 mt-0.5" />
                             <p>
-                              <strong>Not:</strong> Bu lokasyon bilgisi eğitimler ve ara değerlendirmeler için kullanılacaktır. Büyük Demo Day etkinliği ise program bitiminde Malatya'da gerçekleştirilecektir.
+                              <strong>Not:</strong> Bu lokasyon bilgisi eğitimler ve ara değerlendirmeler için kullanılacaktır. Büyük Sunum Günü etkinliği ise program bitiminde Malatya'da gerçekleştirilecektir.
                             </p>
                           </div>
                         </div>
@@ -1303,7 +1300,7 @@ içerisinde sizinle iletişime geçecektir. Başvurunuz için teşekkürler!
                         </div>
                       )}
 
-                      {/* --- STEP 6: Çekiş ve Doğrulama --- */}
+                      {/* --- STEP 6: İlk Müşteri İlgisi ve Doğrulama --- */}
                       {currentStep === 6 && (
                         <div className="space-y-5">
                           <div>
@@ -1421,7 +1418,7 @@ içerisinde sizinle iletişime geçecektir. Başvurunuz için teşekkürler!
 
                           <div>
                             <span className="block text-xs font-semibold uppercase tracking-wider text-charcoal/80 mb-3">
-                              3. Tüm Bootcamp oturumlarına ve Demo Day etkinliğine katılmayı taahhüt ediyor musunuz? *
+                              3. Tüm Bootcamp oturumlarına ve Sunum Günü etkinliğine katılmayı taahhüt ediyor musunuz? *
                             </span>
                             <div className="grid grid-cols-2 gap-4">
                               {["Evet", "Hayır"].map(opt => (

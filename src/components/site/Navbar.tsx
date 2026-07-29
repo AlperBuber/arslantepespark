@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useLang } from "@/i18n/LanguageContext";
-import logo from "@/assets/logo-mark.png";
+import logo from "@/assets/logo-full.png";
 
 const sections = ["about", "program", "modules", "mentors", "timeline", "supporters", "faq", "contact"] as const;
 
@@ -26,18 +26,12 @@ export default function Navbar() {
     <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${scrolled ? "bg-ivory/85 backdrop-blur-md border-b border-border shadow-soft" : "bg-transparent"}`}>
       <nav className="container flex items-center justify-between h-16 md:h-20" aria-label="Birincil">
         {isApplyPage ? (
-          <Link to="/" className="flex items-center gap-3 group">
-            <img src={logo} alt="Arslantepe Spark" className="w-12 h-12 md:w-14 md:h-14 object-contain" width={56} height={56} />
-            <span className="font-display text-lg md:text-xl font-semibold tracking-tight text-bronze whitespace-nowrap">
-              Arslantepe Spark
-            </span>
+          <Link to="/" className="flex items-center group">
+            <img src={logo} alt="Arslantepe Spark — Girişim Hızlandırma Programı" className="h-9 md:h-11 w-auto object-contain" width={463} height={93} />
           </Link>
         ) : (
-          <a href="#top" className="flex items-center gap-3 group">
-            <img src={logo} alt="Arslantepe Spark" className="w-12 h-12 md:w-14 md:h-14 object-contain" width={56} height={56} />
-            <span className="font-display text-lg md:text-xl font-semibold tracking-tight text-bronze whitespace-nowrap">
-              Arslantepe Spark
-            </span>
+          <a href="#top" className="flex items-center group">
+            <img src={logo} alt="Arslantepe Spark — Girişim Hızlandırma Programı" className="h-9 md:h-11 w-auto object-contain" width={463} height={93} />
           </a>
         )}
 

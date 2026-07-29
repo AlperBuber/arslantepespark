@@ -4,10 +4,10 @@ import { Target, Rocket, HandCoins, GraduationCap, Globe2, Sprout } from "lucide
 const goals = [
   { icon: Sprout, t: "Bölgesel yeteneği keşfet", d: "İstanbul sermayesi için görünmez kalacak Anadolu girişimlerini ortaya çıkarıp doğrula." },
   { icon: GraduationCap, t: "Operatör seviyesinde eğitim", d: "Yıllarca süren girişimci öğrenme sürecini 12 haftalık, uygulama odaklı Türkçe müfredata sıkıştır." },
-  { icon: HandCoins, t: "Yatırıma hazırlık", d: "Her ekibi kurumsal fon toplamaya hazırla — sunum, veri odası, term sheet, kurumsal yönetim." },
-  { icon: Target, t: "Kurumsal erişim", d: "İstanbul ve ötesindeki stratejik kurumsal ortaklarda pilot ve satın alma kapılarını aç." },
-  { icon: Rocket, t: "Ölçeklenmeye hızlandırma", d: "Girişimleri program süresi içinde MVP'den ilk ücretli müşterilere ve seed turuna taşı." },
-  { icon: Globe2, t: "Ekosistemi inşa et", d: "Malatya'da kök salmış, kendi kendine dönen bir mentor, melek ve mezun çarkı kur." },
+  { icon: HandCoins, t: "Yatırıma hazırlık", d: "Her ekibi kurumsal fon toplamaya hazırla — sunum, yatırımcılara sunulan belge arşivi, yatırım şartları belgesi, kurumsal yönetim." },
+  { icon: Target, t: "Kurumsal erişim", d: "İstanbul ve ötesindeki stratejik kurumsal ortaklarda deneme projesi ve satın alma kapılarını aç." },
+  { icon: Rocket, t: "Ölçeklenmeye hızlandırma", d: "Girişimleri program süresi içinde MVP'den (minimum uygulanabilir ürün) ilk ücretli müşterilere ve fikir aşaması yatırıma taşı." },
+  { icon: Globe2, t: "Ekosistemi inşa et", d: "Malatya'da kök salmış, kendi kendine dönen bir mentor, melek yatırımcı ve mezun çarkı kur." },
 ];
 
 export default function Goals() {
@@ -16,7 +16,7 @@ export default function Goals() {
       id="program"
       eyebrow="Program Hedefleri"
       title="Altı taahhüt. Tek bir misyon."
-      intro="Her modül, mentor seansı ve demo günü bu hedefler doğrultusunda tasarlanmıştır."
+      intro="Her modül, mentor seansı ve Sunum Günü bu hedefler doğrultusunda tasarlanmıştır."
       filigree
     >
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">

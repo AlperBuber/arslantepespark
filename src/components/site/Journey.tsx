@@ -6,7 +6,7 @@ const stages = [
   { n: "03", t: "Dönem Açılışı", d: "10–12 girişim seçilir. Arslantepe Spark Malatya merkezinde Türkçe açılış haftası." },
   { n: "04", t: "Eğitim & İnşa", d: "Yoğun Türkçe müfredat, haftalık birebir mentorluk, uygulamalı ürün ve pazara açılma sprintleri." },
   { n: "05", t: "İstanbul Haftası", d: "Program sonunda dereceye giren girişimler yatırımcı ve kurumsal şirketler ile görüşmeler için İstanbul'a gelir.", note: "Yatırımcı ve kurumsal görüşmeler yalnızca Scale-up kategorisi içindir." },
-  { n: "06", t: "Demo Day & Sonrası", d: "Melek, VC ve kurumsal yatırımcılara açık demo günü — ardından 6 ay süren mezun desteği.", note: "Yatırımcı sunumları yalnızca Scale-up kategorisi içindir." },
+  { n: "06", t: "Sunum Günü & Sonrası", d: "Melek yatırımcı, VC (girişim sermayesi fonu) ve kurumsal yatırımcılara açık Sunum Günü — ardından 6 ay süren mezun desteği.", note: "Yatırımcı sunumları yalnızca Scale-up kategorisi içindir." },
 ];
 
 export default function Journey() {

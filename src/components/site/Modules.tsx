@@ -1,18 +1,18 @@
 import Section from "./Section";
 
 const modules = [
-  { w: "Hafta 1", t: "Kurucu Zihniyeti & Vizyon", d: "Stratejik anlatı, kurucu işletim sistemi, kuzey yıldızı tanımı." },
-  { w: "Hafta 2", t: "Müşteri Keşfi", d: "Problem görüşmeleri, JTBD, kanıta dayalı ürün kararları." },
-  { w: "Hafta 3", t: "Ürün & MVP Sprintleri", d: "Lean teslim, prototipleme, önceliklendirme çerçeveleri." },
+  { w: "Hafta 1", t: "Kurucu Zihniyeti & Vizyon", d: "Şirketin hikayesi, temel hedef göstergesi, kurucunun günlük çalışma düzeni ve karar sistemi." },
+  { w: "Hafta 2", t: "Müşteri Keşfi", d: "Problem tespitleri, müşteri ihtiyaçları, kanıta dayalı ürün kararları." },
+  { w: "Hafta 3", t: "Ürün & MVP Sprintleri", d: "Yalın ürün geliştirme, prototipleme, önceliklendirme sistematiği." },
   { w: "Hafta 4", t: "Pazara Açılma", d: "Kanal tasarımı, konumlandırma, fiyatlama, satış temelleri." },
-  { w: "Hafta 5", t: "Büyüme & Analitik", d: "Funnel tasarımı, kohort analizi, büyüme deneyleri." },
-  { w: "Hafta 6", t: "Marka & Hikâye Anlatımı", d: "Anlatı odaklı marka, içerik motoru, sunum hikâyesi." },
-  { w: "Hafta 7", t: "Finans & Birim Ekonomisi", d: "Cap table, runway, modelleme, LTV/CAC, yatırım matematiği." },
+  { w: "Hafta 5", t: "Büyüme & Analitik", d: "Müşteri kazanım adımları, dönemsel kullanıcı grubu analizi, test edilecek büyüme yolları." },
+  { w: "Hafta 6", t: "Marka & Hikâye Anlatımı", d: "Marka hikayesi, içerik üretme sistematiği." },
+  { w: "Hafta 7", t: "Finans & Birim Ekonomisi", d: "Ortaklık payı tablosu, nakit dayanma süresi, müşteri ömür boyu değeri, müşteri kazanım maliyeti — tek müşteri başına kâr/zarar hesabı." },
   { w: "Hafta 8", t: "Hukuk & Yönetişim", d: "Şirket yapısı, fikri mülkiyet, sözleşmeler, yatırımcı yönetişimi." },
-  { w: "Hafta 9", t: "Yatırıma Hazırlık", d: "Sunum dosyası, veri odası, term sheet okuryazarlığı, yatırımcı hattı." },
-  { w: "Hafta 10", t: "Kurumsal İş Birlikleri", d: "Erken aşama girişimler için pilotlar, satın alma, kurumsal satış.", scaleUpOnly: true },
+  { w: "Hafta 9", t: "Yatırıma Hazırlık", d: "Sunum dosyası, yatırımcılara sunulan belge arşivi, yatırım şartları belgesi okuryazarlığı, potansiyel yatırımcı listesi." },
+  { w: "Hafta 10", t: "Kurumsal İş Birlikleri", d: "Büyük firmalara nasıl satış yapılır: deneme projeleri, ilk sözleşme, kurumsal satış süreci.", scaleUpOnly: true },
   { w: "Hafta 11", t: "İstanbul Buluşması", d: "Yatırımcı görüşmeleri, ortak atölyeleri, ekosistem derinleşmesi.", scaleUpOnly: true },
-  { w: "Hafta 12", t: "Demo Day", d: "Melek, VC, kurumsal ortak ve basına açık kamuya yönelik sunum günü." },
+  { w: "Hafta 12", t: "Sunum Günü", d: "Melek yatırımcılar, VC'ler, kurumsal ortaklar ve basına açık sunum günü." },
 ];
 
 export default function Modules() {

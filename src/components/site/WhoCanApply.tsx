@@ -10,7 +10,7 @@ const startupCriteria = [
 ];
 
 const scaleupCriteria = [
-  "Çalışır prototipi veya asgari işlevsel ürünü (MVP) olan teknoloji odaklı girişimler",
+  "Çalışır prototipi veya minimum uygulanabilir ürünü (MVP) olan teknoloji odaklı girişimler",
   "Mentor ve yatırımcı geri bildirimine açık ekipler",
   "Programa ve ortak çalışmalara katılım taahhüdü",
 ];

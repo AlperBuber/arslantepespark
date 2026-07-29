@@ -35,10 +35,9 @@ export default function Hero() {
             </Button>
           </div>
 
-          <dl className="mt-14 grid grid-cols-2 max-w-md gap-6 md:gap-10 pt-8 border-t border-ivory/15">
+          <dl className="mt-14 grid max-w-md gap-6 md:gap-10 pt-8 border-t border-ivory/15">
             {[
               { v: t.hero.stat1, l: t.hero.stat1Label },
-              { v: t.hero.stat2, l: t.hero.stat2Label },
             ].map((s) => (
               <div key={s.l}>
                 <dt className="font-display text-3xl md:text-4xl text-[hsl(var(--bronze-glow))] font-semibold">{s.v}</dt>

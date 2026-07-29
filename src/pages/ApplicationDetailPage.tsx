@@ -3,7 +3,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, ExternalLink, Loader2, LogOut } from "lucide-react";
 import type { AuthChangeEvent, Session } from "@supabase/supabase-js";
 import { toast } from "sonner";
-import logo from "@/assets/logo-mark.png";
+import logo from "@/assets/logo-lion.png";
 import { supabase } from "@/lib/supabase.js";
 
 type ApplicationStatus = "yeni" | "değerlendiriliyor" | "kabul" | "red";
@@ -375,7 +375,7 @@ export default function ApplicationDetailPage() {
               <DetailField label="Ölçeklenebilirlik" value={application.olceklenebilirlik} fullWidth />
             </DetailSectionCard>
 
-            <DetailSectionCard title="Çekiş & Doğrulama">
+            <DetailSectionCard title="İlk Müşteri İlgisi & Doğrulama">
               <DetailField label="Mevcut Müşteri / Gelir" value={application.mevcut_gelir} fullWidth />
               <DetailField label="Müşterilerle Görüşüldü mü?" value={boolLabel(application.gorusme_yapildi)} />
               <DetailField label="Görüşme Sayısı" value={String(application.gorusme_sayisi ?? "—")} />
