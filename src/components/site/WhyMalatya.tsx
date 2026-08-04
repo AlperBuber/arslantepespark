@@ -12,7 +12,7 @@ export default function WhyMalatya() {
       id="why"
       eyebrow="Neden Malatya"
       title={<>Anadolu inovasyonunun <span className="text-bronze">yeni cazibe merkezi.</span></>}
-      intro="Malatya yalnızca bir ev sahibi şehir değil — stratejik bir düğüm noktasıdır. Maliyet-etkin operasyonlar, yeniden doğuşa hazır bir kayısı ekonomisi ve global standartlarda araçlara aç bir yetenek tabanı."
+      intro="Malatya yalnızca bir ev sahibi şehir değil, stratejik bir düğüm noktasıdır: verimli operasyonlar, büyüme potansiyeli yüksek bir ekonomi ve küresel araçlara hazır bir yetenek havuzu."
       variant="sand"
     >
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border rounded-2xl overflow-hidden shadow-elegant">

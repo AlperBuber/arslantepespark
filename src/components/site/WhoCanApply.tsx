@@ -20,8 +20,7 @@ export default function WhoCanApply() {
     <Section
       id="who"
       eyebrow="Kimler Başvurabilir"
-      title={<>Anadolu'nun her köşesindeki <span className="text-bronze">girişimciler için.</span></>}
-      intro="Bu bölgelerden birinde inşa ediyorsanız, Arslantepe Spark sizin için tasarlandı."
+      title={<>Anadolu merkezli bir girişimseniz, <span className="text-bronze">Arslantepe Spark sizin için tasarlandı.</span></>}
       variant="sand"
     >
       <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">

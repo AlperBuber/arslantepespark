@@ -1,7 +1,7 @@
 import Section from "./Section";
 
 const stages = [
-  { n: "01", t: "Keşif & Başvuru", d: "13 Anadolu ilini kapsayan açık çağrı. Online başvurular, bölgesel tanıtım toplantıları, üniversite ziyaretleri." },
+  { n: "01", t: "Keşif & Başvuru", d: "Anadolu'nun her köşesini kapsayan açık çağrı. Online başvurular, bölgesel tanıtım toplantıları, üniversite ziyaretleri." },
   { n: "02", t: "Seçim Kampı", d: "İlk 30 girişim, mentor ve ortaklarla 3 günlük seçim kampı için Malatya'ya davet edilir." },
   { n: "03", t: "Dönem Açılışı", d: "10–12 girişim seçilir. Arslantepe Spark Malatya merkezinde Türkçe açılış haftası." },
   { n: "04", t: "Eğitim & İnşa", d: "Yoğun Türkçe müfredat, haftalık birebir mentorluk, uygulamalı ürün ve pazara açılma sprintleri." },

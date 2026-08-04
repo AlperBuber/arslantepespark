@@ -20,8 +20,8 @@ export default function Modules() {
     <Section
       id="modules"
       eyebrow="Eğitim Modülleri"
-      title="Operatörler tarafından kurgulanmış 12 haftalık Türkçe müfredat."
-      intro="Akademisyenler yerine uygulayıcılarla tasarlandı. Her modül, kurucuların ertesi sabah kullanabileceği somut bir çıktıyla sona erer. Tüm dersler Türkçe yürütülür."
+      title="Teorik bilgi değil, deneyimle oluşturulmuş 12 haftalık Türkçe müfredat."
+      intro="Her modül, kurucuların ertesi sabah kullanabileceği somut bir çıktıyla sona erer. Tüm dersler Türkçe yapılır."
       variant="dark"
     >
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-ivory/10 rounded-2xl overflow-hidden">
