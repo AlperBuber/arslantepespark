@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { LanguageProvider } from "@/i18n/LanguageContext";
 import Index from "./pages/Index.tsx";
+import MentorsPage from "./pages/MentorsPage.tsx";
 import ApplyPage from "./pages/ApplyPage.tsx";
 import ManagementPage from "./pages/ManagementPage.tsx";
 import ApplicationDetailPage from "./pages/ApplicationDetailPage.tsx";
@@ -21,6 +22,7 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/mentors" element={<MentorsPage />} />
             <Route path="/apply" element={<ApplyPage />} />
             <Route path="/management" element={<ManagementPage />} />
             <Route path="/management/:id" element={<ApplicationDetailPage />} />

@@ -5,7 +5,20 @@ import { Button } from "@/components/ui/button";
 import { useLang } from "@/i18n/LanguageContext";
 import logo from "@/assets/logo-full.png";
 
-const sections = ["about", "program", "modules", "mentors", "timeline", "supporters", "faq", "contact"] as const;
+type NavItem =
+  | { key: "about" | "program" | "modules" | "timeline" | "supporters" | "faq" | "contact"; type: "anchor" }
+  | { key: "mentors"; type: "page"; to: string };
+
+const navItems: NavItem[] = [
+  { key: "about", type: "anchor" },
+  { key: "program", type: "anchor" },
+  { key: "modules", type: "anchor" },
+  { key: "mentors", type: "page", to: "/mentors" },
+  { key: "timeline", type: "anchor" },
+  { key: "supporters", type: "anchor" },
+  { key: "faq", type: "anchor" },
+  { key: "contact", type: "anchor" },
+];
 
 export default function Navbar() {
   const { t } = useLang();
@@ -20,33 +33,47 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const isApplyPage = pathname === "/apply";
+  const isHome = pathname === "/";
+  // Ana sayfada header şeffafken koyu hero görselinin üzerinde durur; yazılar okunabilsin diye açık renge geçer.
+  const overDark = isHome && !scrolled;
+
+  const renderItem = (item: NavItem, className: string, onClick?: () => void) => {
+    if (item.type === "page") {
+      const isActive = pathname === item.to;
+      return (
+        <Link to={item.to} onClick={onClick} className={`${className} ${isActive ? "text-bronze font-medium" : ""}`}>
+          {t.nav[item.key]}
+        </Link>
+      );
+    }
+    return isHome ? (
+      <a href={`#${item.key}`} onClick={onClick} className={className}>
+        {t.nav[item.key]}
+      </a>
+    ) : (
+      <Link to={`/#${item.key}`} onClick={onClick} className={className}>
+        {t.nav[item.key]}
+      </Link>
+    );
+  };
 
   return (
     <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${scrolled ? "bg-ivory/85 backdrop-blur-md border-b border-border shadow-soft" : "bg-transparent"}`}>
       <nav className="container flex items-center justify-between h-16 md:h-20" aria-label="Birincil">
-        {isApplyPage ? (
-          <Link to="/" className="flex items-center group">
-            <img src={logo} alt="Arslantepe Spark — Girişim Hızlandırma Programı" className="h-9 md:h-11 w-auto object-contain" width={463} height={93} />
-          </Link>
-        ) : (
+        {isHome ? (
           <a href="#top" className="flex items-center group">
             <img src={logo} alt="Arslantepe Spark — Girişim Hızlandırma Programı" className="h-9 md:h-11 w-auto object-contain" width={463} height={93} />
           </a>
+        ) : (
+          <Link to="/" className="flex items-center group">
+            <img src={logo} alt="Arslantepe Spark — Girişim Hızlandırma Programı" className="h-9 md:h-11 w-auto object-contain" width={463} height={93} />
+          </Link>
         )}
 
         <ul className="hidden lg:flex items-center gap-7 text-sm">
-          {sections.map((s) => (
-            <li key={s}>
-              {isApplyPage ? (
-                <Link to={`/#${s}`} className="text-charcoal/75 hover:text-bronze transition-colors">
-                  {t.nav[s as keyof typeof t.nav]}
-                </Link>
-              ) : (
-                <a href={`#${s}`} className="text-charcoal/75 hover:text-bronze transition-colors">
-                  {t.nav[s as keyof typeof t.nav]}
-                </a>
-              )}
+          {navItems.map((item) => (
+            <li key={item.key}>
+              {renderItem(item, `${overDark ? "text-ivory/85" : "text-charcoal/75"} hover:text-bronze transition-colors`)}
             </li>
           ))}
         </ul>
@@ -57,7 +84,7 @@ export default function Navbar() {
           </Button>
         </div>
 
-        <button onClick={() => setOpen(!open)} className="lg:hidden p-2 text-charcoal" aria-label="Menüyü aç/kapat" aria-expanded={open}>
+        <button onClick={() => setOpen(!open)} className={`lg:hidden p-2 ${overDark ? "text-ivory" : "text-charcoal"}`} aria-label="Menüyü aç/kapat" aria-expanded={open}>
           {open ? <X /> : <Menu />}
         </button>
       </nav>
@@ -65,17 +92,9 @@ export default function Navbar() {
       {open && (
         <div className="lg:hidden bg-ivory border-t border-border shadow-elegant">
           <ul className="container py-5 space-y-1">
-            {sections.map((s) => (
-              <li key={s}>
-                {isApplyPage ? (
-                  <Link to={`/#${s}`} onClick={() => setOpen(false)} className="block py-2.5 text-charcoal hover:text-bronze">
-                    {t.nav[s as keyof typeof t.nav]}
-                  </Link>
-                ) : (
-                  <a href={`#${s}`} onClick={() => setOpen(false)} className="block py-2.5 text-charcoal hover:text-bronze">
-                    {t.nav[s as keyof typeof t.nav]}
-                  </a>
-                )}
+            {navItems.map((item) => (
+              <li key={item.key}>
+                {renderItem(item, "block py-2.5 text-charcoal hover:text-bronze", () => setOpen(false))}
               </li>
             ))}
             <li className="pt-3">
