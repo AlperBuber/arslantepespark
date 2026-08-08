@@ -6,7 +6,6 @@ import Goals from "@/components/site/Goals";
 import WhoCanApply from "@/components/site/WhoCanApply";
 import Journey from "@/components/site/Journey";
 import Modules from "@/components/site/Modules";
-import Mentors from "@/components/site/Mentors";
 import Timeline from "@/components/site/Timeline";
 import Supporters from "@/components/site/Supporters";
 import FAQ from "@/components/site/FAQ";
@@ -24,7 +23,6 @@ export default function Index() {
       <WhoCanApply />
       <Journey />
       <Modules />
-      <Mentors />
       <Timeline />
       <Supporters />
       <FAQ />

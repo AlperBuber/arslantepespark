@@ -8,6 +8,7 @@ import ahmetRizaBalim from "@/assets/mentors/ahmet-riza-balim.jpg";
 import ahmetYasagan from "@/assets/mentors/ahmet-yasagan.jpg";
 import alperOnar from "@/assets/mentors/alper-onar.jpg";
 import emreGuzer from "@/assets/mentors/emre-guzer.jpg";
+import erdemMumtazHacipasaoglu from "@/assets/mentors/erdem-mumtaz-hacipasaoglu.jpg";
 import gonulKamali from "@/assets/mentors/gonul-kamali.jpg";
 import hurcanCoskun from "@/assets/mentors/hurcan-coskun.jpg";
 import inalcanGulec from "@/assets/mentors/inalcan-gulec.jpg";
@@ -54,6 +55,12 @@ const mentors: Mentor[] = [
     role: "Lidio - Co-Founder & CEO",
     linkedin: "https://www.linkedin.com/in/emreguzer/",
     photo: emreGuzer,
+  },
+  {
+    name: "Erdem Mümtaz Hacıpaşaoğlu",
+    role: "Vircon Legal - Tech & Venture Lawyer",
+    linkedin: "https://www.linkedin.com/in/mumtazhacipasaoglu/",
+    photo: erdemMumtazHacipasaoglu,
   },
   {
     name: "Gönül Kamali",
