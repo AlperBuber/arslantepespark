@@ -17,12 +17,15 @@ import merveSusutKurc from "@/assets/mentors/merve-susut-kurc.png";
 import mineDedekoca from "@/assets/mentors/mine-dedekoca.jpg";
 import nevraDuyguDuru from "@/assets/mentors/nevra-duygu-duru.jpg";
 import sadikKoseoglu from "@/assets/mentors/sadik-koseoglu.jpg";
+import selmaBahcivanoglu from "@/assets/mentors/selma-bahcivanoglu.jpg";
 import serhatSener from "@/assets/mentors/serhat-sener.jpg";
+import sibelSoyakEsder from "@/assets/mentors/sibel-soyak-esder.png";
 import tanselKaya from "@/assets/mentors/tansel-kaya.png";
 import timurSirt from "@/assets/mentors/timur-sirt.jpg";
 import tuncBerkman from "@/assets/mentors/tunc-berkman.jpg";
 import unalAslan from "@/assets/mentors/unal-aslan.jpg";
 import utkuGokkaya from "@/assets/mentors/utku-gokkaya.jpg";
+import yektaPektas from "@/assets/mentors/yekta-pektas.jpg";
 
 interface Mentor {
   name: string;
@@ -40,43 +43,43 @@ const mentors: Mentor[] = [
   },
   {
     name: "Ahmet Yasagan",
-    role: "YASAGAN International Consultancy - Danışman",
+    role: "YASAGAN Uluslararası Danışmanlık, Danışman",
     linkedin: "https://www.linkedin.com/in/yasagan/",
     photo: ahmetYasagan,
   },
   {
     name: "Alper Onar",
-    role: "BBO Legal - Partner",
+    role: "BBO Legal, Ortak",
     linkedin: "https://www.linkedin.com/in/alper-onar-452a5558/",
     photo: alperOnar,
   },
   {
     name: "Emre Güzer",
-    role: "Lidio - Co-Founder & CEO",
+    role: "Lidio, Kurucu Ortak & Genel Müdür",
     linkedin: "https://www.linkedin.com/in/emreguzer/",
     photo: emreGuzer,
   },
   {
     name: "Erdem Mümtaz Hacıpaşaoğlu",
-    role: "Vircon Legal - Tech & Venture Lawyer",
+    role: "Vircon Legal, Teknoloji & Girişim Hukukçusu",
     linkedin: "https://www.linkedin.com/in/mumtazhacipasaoglu/",
     photo: erdemMumtazHacipasaoglu,
   },
   {
     name: "Gönül Kamali",
-    role: "KG&BG Group Co-Founder & THINK BIG Digital Solutions - CEO",
+    role: "KG&BG Group Kurucu Ortağı & THINK BIG Digital Solutions Genel Müdürü",
     linkedin: "https://www.linkedin.com/in/g%C3%B6n%C3%BCl-kamali-a8157b3/",
     photo: gonulKamali,
   },
   {
     name: "Hürcan Coşkun",
-    role: "Kredico - CEO",
+    role: "Kredico, Genel Müdür",
     linkedin: "https://www.linkedin.com/in/hurcan-coskun-6508b15/",
     photo: hurcanCoskun,
   },
   {
     name: "İnalcan Güleç",
-    role: "Eksim Ventures - Senior VC",
+    role: "Eksim Ventures, Kıdemli Girişim Sermayesi Yatırımcısı",
     linkedin: "https://www.linkedin.com/in/inalcangulec/",
     photo: inalcanGulec,
   },
@@ -88,19 +91,19 @@ const mentors: Mentor[] = [
   },
   {
     name: "Merve Şuşut Kurç",
-    role: "Lookup - Human Resources Consultant",
+    role: "Lookup, İnsan Kaynakları Danışmanı",
     linkedin: "https://www.linkedin.com/in/merve-%C5%9Fu%C5%9Fut-kur%C3%A7-3749a6236/",
     photo: merveSusutKurc,
   },
   {
     name: "Mine Dedekoca",
-    role: "HappyWork Studio - Founder",
+    role: "HappyWork Studio, Kurucu",
     linkedin: "https://www.linkedin.com/in/minededekoca/",
     photo: mineDedekoca,
   },
   {
     name: "Nevra Duygu Duru",
-    role: "B-Connector - Marketing Leader & Fractional CMO",
+    role: "B-Connector, Danışman ve Mentor",
     linkedin: "https://www.linkedin.com/in/nevraduyguduru/",
     photo: nevraDuyguDuru,
   },
@@ -111,20 +114,32 @@ const mentors: Mentor[] = [
     photo: sadikKoseoglu,
   },
   {
+    name: "Selma Bahçıvanoğlu",
+    role: "Simya VC, Yönetici Ortak",
+    linkedin: "https://www.linkedin.com/in/selmabahcivanoglu/",
+    photo: selmaBahcivanoglu,
+  },
+  {
     name: "Serhat Şener",
-    role: "Fintechium - Board Member & Fintech Expert",
+    role: "Fintechium, Yönetim Kurulu Üyesi ve Finansal Teknolojiler Uzmanı",
     linkedin: "https://www.linkedin.com/in/serhat-sener/",
     photo: serhatSener,
   },
   {
+    name: "Sibel Soyak Esder",
+    role: "Rezonans, Kurucu",
+    linkedin: "https://www.linkedin.com/in/sibel-soyak-esder/",
+    photo: sibelSoyakEsder,
+  },
+  {
     name: "Tansel Kaya",
-    role: "The Mindstone Blockchain Labs - CEO",
+    role: "The Mindstone Blockchain Labs, Genel Müdür",
     linkedin: "https://www.linkedin.com/in/tanselkaya/",
     photo: tanselKaya,
   },
   {
     name: "Timur Sırt",
-    role: "Gazeteci",
+    role: "Girişimcilik Danışmanı, Veri Madenciliği Uzmanı, Girişim ve Teknoloji Gazetecisi, Konuşmacı",
     linkedin: "https://www.linkedin.com/in/timur-sirt-a4b17637/",
     photo: timurSirt,
   },
@@ -136,15 +151,21 @@ const mentors: Mentor[] = [
   },
   {
     name: "Utku Gökkaya",
-    role: "İTÜ Çekirdek - Advisor & Mentor",
+    role: "İTÜ Çekirdek, Danışman & Mentor",
     linkedin: "https://www.linkedin.com/in/utku-gokkaya-6b3851b/",
     photo: utkuGokkaya,
   },
   {
     name: "Ünal Aslan",
-    role: "IşıkTEKMER - Manager & Innowider - Founder",
+    role: "IşıkTEKMER Müdürü ve Innowider Kurucusu",
     linkedin: "https://www.linkedin.com/in/unal-aslan/",
     photo: unalAslan,
+  },
+  {
+    name: "Yekta Pektaş",
+    role: "Finansal Teknolojiler, Ürün ve Büyüme Uzmanı",
+    linkedin: "https://www.linkedin.com/in/yekta-pektas/",
+    photo: yektaPektas,
   },
 ];
 
