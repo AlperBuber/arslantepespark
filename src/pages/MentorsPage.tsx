@@ -7,9 +7,12 @@ import Section from "@/components/site/Section";
 import ahmetRizaBalim from "@/assets/mentors/ahmet-riza-balim.jpg";
 import ahmetYasagan from "@/assets/mentors/ahmet-yasagan.jpg";
 import alperOnar from "@/assets/mentors/alper-onar.jpg";
+import barisKarakullukcu from "@/assets/mentors/baris-karakullukcu.png";
 import emreGuzer from "@/assets/mentors/emre-guzer.jpg";
+import enginSatana from "@/assets/mentors/engin-satana.jpg";
 import erdemMumtazHacipasaoglu from "@/assets/mentors/erdem-mumtaz-hacipasaoglu.jpg";
 import gonulKamali from "@/assets/mentors/gonul-kamali.jpg";
+import gulsahCakir from "@/assets/mentors/gulsah-cakir.jpg";
 import hurcanCoskun from "@/assets/mentors/hurcan-coskun.jpg";
 import inalcanGulec from "@/assets/mentors/inalcan-gulec.jpg";
 import ismailHaznedar from "@/assets/mentors/ismail-haznedar.png";
@@ -17,6 +20,7 @@ import merveSusutKurc from "@/assets/mentors/merve-susut-kurc.png";
 import mineDedekoca from "@/assets/mentors/mine-dedekoca.jpg";
 import nevraDuyguDuru from "@/assets/mentors/nevra-duygu-duru.jpg";
 import sadikKoseoglu from "@/assets/mentors/sadik-koseoglu.jpg";
+import selimYazici from "@/assets/mentors/selim-yazici.jpg";
 import selmaBahcivanoglu from "@/assets/mentors/selma-bahcivanoglu.jpg";
 import serhatSener from "@/assets/mentors/serhat-sener.jpg";
 import sibelSoyakEsder from "@/assets/mentors/sibel-soyak-esder.png";
@@ -31,7 +35,7 @@ interface Mentor {
   name: string;
   role: string;
   linkedin: string;
-  photo: string;
+  photo?: string;
 }
 
 const mentors: Mentor[] = [
@@ -54,6 +58,17 @@ const mentors: Mentor[] = [
     photo: alperOnar,
   },
   {
+    name: "Aytül Erçil",
+    role: "Vispera A.Ş. Ortağı, Eş-CEO ve Yönetim Kurulu Başkanı",
+    linkedin: "https://www.linkedin.com/in/aytul-ercil-b833b43/",
+  },
+  {
+    name: "Barış Karakullukçu",
+    role: "Yapay Zeka ve Teknoloji Derneği Yönetim Kurulu Başkanı ve Aionire Kurucusu",
+    linkedin: "https://www.linkedin.com/in/baris-karakullukcu/",
+    photo: barisKarakullukcu,
+  },
+  {
     name: "Emre Güzer",
     role: "Lidio, Kurucu Ortak & Genel Müdür",
     linkedin: "https://www.linkedin.com/in/emreguzer/",
@@ -72,6 +87,12 @@ const mentors: Mentor[] = [
     photo: gonulKamali,
   },
   {
+    name: "Gülşah Çakır",
+    role: "XMind Studio, Kurucu",
+    linkedin: "https://www.linkedin.com/in/gulsahcakir/",
+    photo: gulsahCakir,
+  },
+  {
     name: "Hürcan Coşkun",
     role: "Kredico, Genel Müdür",
     linkedin: "https://www.linkedin.com/in/hurcan-coskun-6508b15/",
@@ -88,6 +109,12 @@ const mentors: Mentor[] = [
     role: "Stratejik İşler - Stratejist & Yönetim Danışmanı (CMC)",
     linkedin: "https://www.linkedin.com/in/ihaznedar/",
     photo: ismailHaznedar,
+  },
+  {
+    name: "M. Engin Satana",
+    role: "Dopigo, Kurucu Ortak & Genel Müdür",
+    linkedin: "https://www.linkedin.com/in/m-engin-satana-7208054/",
+    photo: enginSatana,
   },
   {
     name: "Merve Şuşut Kurç",
@@ -112,6 +139,12 @@ const mentors: Mentor[] = [
     role: "Şirket Ortağım Melek Yatırımcı Ağı - Direktör",
     linkedin: "https://www.linkedin.com/in/sad%C4%B1k-k%C3%B6seo%C4%9Flu-874b4623/",
     photo: sadikKoseoglu,
+  },
+  {
+    name: "Selim Yazıcı",
+    role: "İstanbul Üniversitesi Öğretim Üyesi ve FinTech İstanbul Kurucu Ortağı",
+    linkedin: "https://www.linkedin.com/in/selimyazici/",
+    photo: selimYazici,
   },
   {
     name: "Selma Bahçıvanoğlu",
@@ -163,22 +196,38 @@ const mentors: Mentor[] = [
   },
   {
     name: "Yekta Pektaş",
-    role: "Finansal Teknolojiler, Ürün ve Büyüme Uzmanı",
+    role: "Lecta, Kurucu",
     linkedin: "https://www.linkedin.com/in/yekta-pektas/",
     photo: yektaPektas,
   },
 ];
 
+function WomanIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 128 128" className={className} aria-hidden="true" fill="currentColor">
+      <path d="M64 16c-19 0-31 14-31 32 0 13 4 22 7 27l-4 12h56l-4-12c3-5 7-14 7-27 0-18-12-32-31-32z" />
+      <circle cx="64" cy="53" r="17" className="fill-secondary" />
+      <path d="M20 120c5-25 23-35 44-35s39 10 44 35H20z" />
+    </svg>
+  );
+}
+
 function MentorCard({ mentor }: { mentor: Mentor }) {
   return (
     <div className="bg-card border border-border rounded-2xl p-3 flex flex-col hover:shadow-bronze transition-all duration-500 hover:-translate-y-1">
       <div className="aspect-square rounded-xl overflow-hidden bg-secondary">
-        <img
-          src={mentor.photo}
-          alt={mentor.name}
-          className="w-full h-full object-cover object-top"
-          loading="lazy"
-        />
+        {mentor.photo ? (
+          <img
+            src={mentor.photo}
+            alt={mentor.name}
+            className="w-full h-full object-cover object-top"
+            loading="lazy"
+          />
+        ) : (
+          <div className="w-full h-full flex items-end justify-center text-bronze/40">
+            <WomanIcon className="w-3/4 h-3/4" />
+          </div>
+        )}
       </div>
       <div className="px-2.5 pt-4 pb-2.5 flex flex-col flex-1">
         <h3 className="font-display text-lg text-charcoal font-semibold leading-snug">{mentor.name}</h3>

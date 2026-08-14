@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import Section from "./Section";
 import logo from "@/assets/logo-full.png";
-import bconnectorLogo from "@/assets/bconnector-logo.png";
+import bconnectorLogo from "@/assets/bconnector-logo-white.png";
 
 const CONTACT_EMAIL = "info@bconnector.org";
 const BCONNECTOR_URL = "https://bconnector.org";
@@ -85,16 +85,16 @@ export default function ContactFooter() {
           </div>
           <div className="mt-8 pt-6 border-t border-ivory/10 flex flex-col md:flex-row md:items-center justify-between gap-3 text-xs text-ivory/50">
             <span>© {new Date().getFullYear()} Arslantepe Spark. Tüm hakları saklıdır.</span>
-            <span className="flex items-center gap-2">
+            <span className="flex items-center gap-2 text-sm">
               By
               <a
                 href={BCONNECTOR_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="B-Connector"
-                className="inline-flex items-center rounded-md bg-ivory px-2 py-1.5 transition-opacity hover:opacity-80"
+                className="inline-flex items-center transition-opacity hover:opacity-80"
               >
-                <img src={bconnectorLogo} alt="B-Connector" className="h-5 w-auto object-contain" width={180} height={60} loading="lazy" />
+                <img src={bconnectorLogo} alt="B-Connector" className="h-7 w-auto object-contain" width={180} height={60} loading="lazy" />
               </a>
             </span>
           </div>
