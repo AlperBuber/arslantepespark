@@ -7,6 +7,7 @@ import Section from "@/components/site/Section";
 import ahmetRizaBalim from "@/assets/mentors/ahmet-riza-balim.jpg";
 import ahmetYasagan from "@/assets/mentors/ahmet-yasagan.jpg";
 import alperOnar from "@/assets/mentors/alper-onar.jpg";
+import aytulErcil from "@/assets/mentors/aytul-ercil.jpg";
 import barisKarakullukcu from "@/assets/mentors/baris-karakullukcu.png";
 import emreGuzer from "@/assets/mentors/emre-guzer.jpg";
 import enginSatana from "@/assets/mentors/engin-satana.jpg";
@@ -19,6 +20,7 @@ import ismailHaznedar from "@/assets/mentors/ismail-haznedar.png";
 import merveSusutKurc from "@/assets/mentors/merve-susut-kurc.png";
 import mineDedekoca from "@/assets/mentors/mine-dedekoca.jpg";
 import nevraDuyguDuru from "@/assets/mentors/nevra-duygu-duru.jpg";
+import ozcanCavus from "@/assets/mentors/ozcan-cavus.jpg";
 import sadikKoseoglu from "@/assets/mentors/sadik-koseoglu.jpg";
 import selimYazici from "@/assets/mentors/selim-yazici.jpg";
 import selmaBahcivanoglu from "@/assets/mentors/selma-bahcivanoglu.jpg";
@@ -61,6 +63,7 @@ const mentors: Mentor[] = [
     name: "Aytül Erçil",
     role: "Vispera A.Ş. Ortağı, Eş-CEO ve Yönetim Kurulu Başkanı",
     linkedin: "https://www.linkedin.com/in/aytul-ercil-b833b43/",
+    photo: aytulErcil,
   },
   {
     name: "Barış Karakullukçu",
@@ -133,6 +136,12 @@ const mentors: Mentor[] = [
     role: "B-Connector, Danışman ve Mentor",
     linkedin: "https://www.linkedin.com/in/nevraduyguduru/",
     photo: nevraDuyguDuru,
+  },
+  {
+    name: "Özcan Çavuş",
+    role: "Dativa, Kurucu",
+    linkedin: "https://www.linkedin.com/in/ozcancavus/",
+    photo: ozcanCavus,
   },
   {
     name: "Sadık Köseoğlu",
