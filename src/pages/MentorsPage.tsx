@@ -11,21 +11,28 @@ import barisKarakullukcu from "@/assets/mentors/baris-karakullukcu.png";
 import emreGuzer from "@/assets/mentors/emre-guzer.jpg";
 import enginSatana from "@/assets/mentors/engin-satana.jpg";
 import erdemMumtazHacipasaoglu from "@/assets/mentors/erdem-mumtaz-hacipasaoglu.jpg";
+import erkanBahce from "@/assets/mentors/erkan-bahce.jpg";
+import furkanOzpolat from "@/assets/mentors/furkan-ozpolat.jpg";
+import gokhanTuncel from "@/assets/mentors/gokhan-tuncel.jpg";
 import gonulKamali from "@/assets/mentors/gonul-kamali.jpg";
 import gulsahCakir from "@/assets/mentors/gulsah-cakir.jpg";
+import hasanYilmaz from "@/assets/mentors/hasan-yilmaz.jpg";
 import hurcanCoskun from "@/assets/mentors/hurcan-coskun.jpg";
+import ibrahimGezer from "@/assets/mentors/ibrahim-gezer.png";
 import inalcanGulec from "@/assets/mentors/inalcan-gulec.jpg";
 import ismailHaznedar from "@/assets/mentors/ismail-haznedar.png";
 import merveSusutKurc from "@/assets/mentors/merve-susut-kurc.png";
 import mineDedekoca from "@/assets/mentors/mine-dedekoca.jpg";
 import nevraDuyguDuru from "@/assets/mentors/nevra-duygu-duru.jpg";
 import sadikKoseoglu from "@/assets/mentors/sadik-koseoglu.jpg";
+import selimAgca from "@/assets/mentors/selim-agca.jpg";
 import selimYazici from "@/assets/mentors/selim-yazici.jpg";
 import selmaBahcivanoglu from "@/assets/mentors/selma-bahcivanoglu.jpg";
 import serhatSener from "@/assets/mentors/serhat-sener.jpg";
 import sibelSoyakEsder from "@/assets/mentors/sibel-soyak-esder.png";
 import tanselKaya from "@/assets/mentors/tansel-kaya.png";
 import timurSirt from "@/assets/mentors/timur-sirt.jpg";
+import tolgaBildirici from "@/assets/mentors/tolga-bildirici.jpg";
 import tuncBerkman from "@/assets/mentors/tunc-berkman.jpg";
 import unalAslan from "@/assets/mentors/unal-aslan.jpg";
 import utkuGokkaya from "@/assets/mentors/utku-gokkaya.jpg";
@@ -34,7 +41,7 @@ import yektaPektas from "@/assets/mentors/yekta-pektas.jpg";
 interface Mentor {
   name: string;
   role: string;
-  linkedin: string;
+  linkedin?: string;
   photo?: string;
 }
 
@@ -81,6 +88,23 @@ const mentors: Mentor[] = [
     photo: erdemMumtazHacipasaoglu,
   },
   {
+    name: "Doç. Dr. Erkan Bahçe",
+    role: "İnönü Üniversitesi, Akademisyen",
+    linkedin: "https://www.linkedin.com/in/erkan-bahce-40892399/",
+    photo: erkanBahce,
+  },
+  {
+    name: "Furkan Özpolat",
+    role: "Malatya Teknokent Uzmanı",
+    linkedin: "https://www.linkedin.com/in/furkan-%C3%B6zpolat-a2312a284/",
+    photo: furkanOzpolat,
+  },
+  {
+    name: "Prof. Dr. Gökhan Tuncel",
+    role: "İnönü Üniversitesi, Akademisyen",
+    photo: gokhanTuncel,
+  },
+  {
     name: "Gönül Kamali",
     role: "KG&BG Group Kurucu Ortağı & THINK BIG Digital Solutions Genel Müdürü",
     linkedin: "https://www.linkedin.com/in/g%C3%B6n%C3%BCl-kamali-a8157b3/",
@@ -93,10 +117,21 @@ const mentors: Mentor[] = [
     photo: gulsahCakir,
   },
   {
+    name: "Doç. Dr. Hasan Yılmaz",
+    role: "Malatya Teknokent Genel Müdürü",
+    linkedin: "https://www.linkedin.com/in/hasan-y%C4%B1lmaz-7a3b57210/",
+    photo: hasanYilmaz,
+  },
+  {
     name: "Hürcan Coşkun",
     role: "Kredico, Genel Müdür",
     linkedin: "https://www.linkedin.com/in/hurcan-coskun-6508b15/",
     photo: hurcanCoskun,
+  },
+  {
+    name: "Prof. Dr. İbrahim Gezer",
+    role: "İnönü Üniversitesi, Akademisyen",
+    photo: ibrahimGezer,
   },
   {
     name: "İnalcan Güleç",
@@ -141,6 +176,12 @@ const mentors: Mentor[] = [
     photo: sadikKoseoglu,
   },
   {
+    name: "Selim Ağca",
+    role: "Paynion Kurucu ve Genel Müdür",
+    linkedin: "https://www.linkedin.com/in/selim-agca/",
+    photo: selimAgca,
+  },
+  {
     name: "Selim Yazıcı",
     role: "İstanbul Üniversitesi Öğretim Üyesi ve FinTech İstanbul Kurucu Ortağı",
     linkedin: "https://www.linkedin.com/in/selimyazici/",
@@ -175,6 +216,12 @@ const mentors: Mentor[] = [
     role: "Girişimcilik Danışmanı, Veri Madenciliği Uzmanı, Girişim ve Teknoloji Gazetecisi, Konuşmacı",
     linkedin: "https://www.linkedin.com/in/timur-sirt-a4b17637/",
     photo: timurSirt,
+  },
+  {
+    name: "Tolga Bildirici",
+    role: "Dijitalpark Teknokent Genel Müdür Yardımcısı",
+    linkedin: "https://www.linkedin.com/in/tlgbldrc/",
+    photo: tolgaBildirici,
   },
   {
     name: "Tunç Berkman",
@@ -232,17 +279,19 @@ function MentorCard({ mentor }: { mentor: Mentor }) {
       <div className="px-2.5 pt-4 pb-2.5 flex flex-col flex-1">
         <h3 className="font-display text-lg text-charcoal font-semibold leading-snug">{mentor.name}</h3>
         <p className="text-sm text-muted-foreground mt-1.5 leading-relaxed">{mentor.role}</p>
-        <div className="mt-auto pt-4">
-          <a
-            href={mentor.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`${mentor.name} LinkedIn profili`}
-            className="inline-flex w-9 h-9 rounded-full bg-[#0A66C2] text-white items-center justify-center hover:opacity-85 hover:scale-105 transition-all"
-          >
-            <Linkedin className="w-5 h-5" fill="currentColor" strokeWidth={0} />
-          </a>
-        </div>
+        {mentor.linkedin && (
+          <div className="mt-auto pt-4">
+            <a
+              href={mentor.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${mentor.name} LinkedIn profili`}
+              className="inline-flex w-9 h-9 rounded-full bg-[#0A66C2] text-white items-center justify-center hover:opacity-85 hover:scale-105 transition-all"
+            >
+              <Linkedin className="w-5 h-5" fill="currentColor" strokeWidth={0} />
+            </a>
+          </div>
+        )}
       </div>
     </div>
   );
