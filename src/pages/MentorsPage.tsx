@@ -191,7 +191,7 @@ const mentors: Mentor[] = [
     photo: selimAgca,
   },
   {
-    name: "Selim Yazıcı",
+    name: "Prof. Dr. Selim Yazıcı",
     role: "İstanbul Üniversitesi Öğretim Üyesi ve FinTech İstanbul Kurucu Ortağı",
     linkedin: "https://www.linkedin.com/in/selimyazici/",
     photo: selimYazici,
