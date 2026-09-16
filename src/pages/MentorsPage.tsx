@@ -168,7 +168,7 @@ const mentors: Mentor[] = [
   },
   {
     name: "Nevra Duygu Duru",
-    role: "B-Connector, Danışman ve Mentor",
+    role: "B-Connector, Arslantepe Spark Program Direktörü",
     linkedin: "https://www.linkedin.com/in/nevraduyguduru/",
     photo: nevraDuyguDuru,
   },
