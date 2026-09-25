@@ -52,5 +52,6 @@ değişir.
 ## Push yasağı
 
 Ajanlar bu repoda **push yapmaz** — push, Netlify'da otomatik deploy
-demektir. İş branch'te commit edilir ve bekler; push yalnızca kullanıcı
-açıkça "pushla" dediğinde yapılır. PR ve merge de push sonrasına kalır.
+demektir. Branch açılmaz: iş doğrudan `main` üzerinde commit edilir ve
+bekler; push yalnızca kullanıcı açıkça "pushla" dediğinde `main`'e
+yapılır. PR gerekmez.
