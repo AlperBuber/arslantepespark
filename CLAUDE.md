@@ -13,7 +13,7 @@ React + TypeScript + Vite statik sitesi. Netlify'da yayında —
 ## Mentor verisi
 
 Tek kaynak: `src/pages/MentorsPage.tsx` içindeki `mentors` dizisi
-(CMS/JSON yok). Şu an 28 kayıt. Liste ilk isme göre alfabetik
+(CMS/JSON yok). Şu an 39 kayıt. Liste ilk isme göre alfabetik
 (Türkçe sıralama); yeni kayıt alfabetik yerine eklenir.
 
 Kayıt yapısı (`Mentor` arayüzü):

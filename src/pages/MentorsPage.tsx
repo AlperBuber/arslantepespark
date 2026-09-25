@@ -4,6 +4,7 @@ import Navbar from "@/components/site/Navbar";
 import ContactFooter from "@/components/site/ContactFooter";
 import Section from "@/components/site/Section";
 
+import adnanFatihKocamaz from "@/assets/mentors/adnan-fatih-kocamaz.jpg";
 import ahmetRizaBalim from "@/assets/mentors/ahmet-riza-balim.jpg";
 import ahmetYasagan from "@/assets/mentors/ahmet-yasagan.jpg";
 import alperOnar from "@/assets/mentors/alper-onar.jpg";
@@ -19,12 +20,14 @@ import gonulKamali from "@/assets/mentors/gonul-kamali.jpg";
 import gulsahCakir from "@/assets/mentors/gulsah-cakir.jpg";
 import hasanYilmaz from "@/assets/mentors/hasan-yilmaz.jpg";
 import hurcanCoskun from "@/assets/mentors/hurcan-coskun.jpg";
-import ibrahimGezer from "@/assets/mentors/ibrahim-gezer.png";
+import ibrahimGezer from "@/assets/mentors/ibrahim-gezer.jpg";
 import inalcanGulec from "@/assets/mentors/inalcan-gulec.jpg";
 import ismailHaznedar from "@/assets/mentors/ismail-haznedar.png";
 import merveSusutKurc from "@/assets/mentors/merve-susut-kurc.png";
 import mineDedekoca from "@/assets/mentors/mine-dedekoca.jpg";
+import mustafaAtes from "@/assets/mentors/mustafa-ates.jpg";
 import nevraDuyguDuru from "@/assets/mentors/nevra-duygu-duru.jpg";
+import omerHantal from "@/assets/mentors/omer-hantal.jpg";
 import ozcanCavus from "@/assets/mentors/ozcan-cavus.jpg";
 import sadikKoseoglu from "@/assets/mentors/sadik-koseoglu.jpg";
 import selimAgca from "@/assets/mentors/selim-agca.jpg";
@@ -48,6 +51,11 @@ interface Mentor {
 }
 
 const mentors: Mentor[] = [
+  {
+    name: "Prof. Dr. Adnan Fatih Kocamaz",
+    role: "İnönü Üniversitesi, Akademisyen",
+    photo: adnanFatihKocamaz,
+  },
   {
     name: "Ahmet Rıza Balım",
     role: "Dijitalpark Teknokent - Teknoloji Transfer Ofisleri Uzmanı",
@@ -91,7 +99,7 @@ const mentors: Mentor[] = [
     photo: erdemMumtazHacipasaoglu,
   },
   {
-    name: "Doç. Dr. Erkan Bahçe",
+    name: "Prof. Dr. Erkan Bahçe",
     role: "İnönü Üniversitesi, Akademisyen",
     linkedin: "https://www.linkedin.com/in/erkan-bahce-40892399/",
     photo: erkanBahce,
@@ -167,10 +175,21 @@ const mentors: Mentor[] = [
     photo: mineDedekoca,
   },
   {
+    name: "Prof. Dr. Mustafa Ateş",
+    role: "Medicana Zincirlikuyu Hastanesi, Genel Cerrahi Uzmanı",
+    photo: mustafaAtes,
+  },
+  {
     name: "Nevra Duygu Duru",
     role: "B-Connector, Arslantepe Spark Program Direktörü",
     linkedin: "https://www.linkedin.com/in/nevraduyguduru/",
     photo: nevraDuyguDuru,
+  },
+  {
+    name: "Ömer Hantal",
+    role: "Melek Yatırımcı, İnovasyon ve Strateji Elçisi",
+    linkedin: "https://www.linkedin.com/in/omer-hantal/",
+    photo: omerHantal,
   },
   {
     name: "Özcan Çavuş",
