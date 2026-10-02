@@ -34,8 +34,6 @@ export default function Navbar() {
   }, []);
 
   const isHome = pathname === "/";
-  // Ana sayfada header şeffafken koyu hero görselinin üzerinde durur; yazılar okunabilsin diye açık renge geçer.
-  const overDark = isHome && !scrolled;
 
   const renderItem = (item: NavItem, className: string, onClick?: () => void) => {
     if (item.type === "page") {
@@ -73,7 +71,7 @@ export default function Navbar() {
         <ul className="hidden lg:flex items-center gap-7 text-sm">
           {navItems.map((item) => (
             <li key={item.key}>
-              {renderItem(item, `${overDark ? "text-ivory/85" : "text-charcoal/75"} hover:text-bronze transition-colors`)}
+              {renderItem(item, "text-charcoal/75 hover:text-bronze transition-colors")}
             </li>
           ))}
         </ul>
@@ -84,7 +82,7 @@ export default function Navbar() {
           </Button>
         </div>
 
-        <button onClick={() => setOpen(!open)} className={`lg:hidden p-2 ${overDark ? "text-ivory" : "text-charcoal"}`} aria-label="Menüyü aç/kapat" aria-expanded={open}>
+        <button onClick={() => setOpen(!open)} className={"lg:hidden p-2 text-charcoal"} aria-label="Menüyü aç/kapat" aria-expanded={open}>
           {open ? <X /> : <Menu />}
         </button>
       </nav>
