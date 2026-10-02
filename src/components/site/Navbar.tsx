@@ -77,7 +77,7 @@ export default function Navbar() {
         </ul>
 
         <div className="hidden lg:flex items-center gap-3">
-          <Button asChild variant="default" className="bg-charcoal hover:bg-charcoal/90 text-ivory rounded-full px-5">
+          <Button asChild variant="default" className="bg-charcoal hover:bg-charcoal/90 text-ivory rounded px-5">
             <Link to="/apply">{t.nav.apply}</Link>
           </Button>
         </div>
@@ -96,7 +96,7 @@ export default function Navbar() {
               </li>
             ))}
             <li className="pt-3">
-              <Button asChild className="w-full bg-charcoal text-ivory rounded-full">
+              <Button asChild className="w-full bg-charcoal text-ivory rounded">
                 <Link to="/apply" onClick={() => setOpen(false)}>{t.nav.apply}</Link>
               </Button>
             </li>

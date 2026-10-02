@@ -516,7 +516,7 @@ export default function ManagementPage() {
             <button
               type="submit"
               disabled={loginLoading}
-              className="w-full h-11 rounded-full bg-charcoal hover:bg-charcoal/90 text-ivory font-semibold text-sm transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full h-11 rounded bg-charcoal hover:bg-charcoal/90 text-ivory font-semibold text-sm transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {loginLoading ? "Giriş yapılıyor..." : "Giriş Yap"}
             </button>
@@ -542,7 +542,7 @@ export default function ManagementPage() {
           <button
             type="button"
             onClick={handleSignOut}
-            className="inline-flex items-center gap-2 text-xs md:text-sm font-medium text-charcoal/70 hover:text-bronze transition-colors px-4 py-2 rounded-full hover:bg-charcoal/5 border border-border"
+            className="inline-flex items-center gap-2 text-xs md:text-sm font-medium text-charcoal/70 hover:text-bronze transition-colors px-4 py-2 rounded hover:bg-charcoal/5 border border-border"
           >
             <LogOut className="w-4 h-4" /> Çıkış Yap
           </button>
@@ -568,7 +568,7 @@ export default function ManagementPage() {
                   type="button"
                   onClick={handleExportCsv}
                   disabled={exporting || listLoading || applications.length === 0}
-                  className="inline-flex items-center justify-center gap-2 text-sm font-medium px-4 py-2 rounded-full border border-border bg-secondary hover:bg-secondary/80 transition-colors disabled:opacity-50"
+                  className="inline-flex items-center justify-center gap-2 text-sm font-medium px-4 py-2 rounded border border-border bg-secondary hover:bg-secondary/80 transition-colors disabled:opacity-50"
                 >
                   {exporting ? <Loader2 className="w-4 h-4 animate-spin" /> : <Download className="w-4 h-4" />}
                   Excel&apos;e Aktar (CSV)
@@ -577,7 +577,7 @@ export default function ManagementPage() {
                   type="button"
                   onClick={handleDownloadZip}
                   disabled={zipLoading || listLoading || applications.length === 0}
-                  className="inline-flex items-center justify-center gap-2 text-sm font-medium px-4 py-2 rounded-full border border-border bg-secondary hover:bg-secondary/80 transition-colors disabled:opacity-50"
+                  className="inline-flex items-center justify-center gap-2 text-sm font-medium px-4 py-2 rounded border border-border bg-secondary hover:bg-secondary/80 transition-colors disabled:opacity-50"
                 >
                   {zipLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Download className="w-4 h-4" />}
                   {zipLoading ? `Belgeler hazırlanıyor... ${zipProgress.current} / ${zipProgress.total}` : "Belgeleri İndir (ZIP)"}
@@ -586,7 +586,7 @@ export default function ManagementPage() {
                   type="button"
                   onClick={fetchApplications}
                   disabled={listLoading}
-                  className="inline-flex items-center justify-center gap-2 text-sm font-medium px-4 py-2 rounded-full border border-border bg-secondary hover:bg-secondary/80 transition-colors disabled:opacity-50"
+                  className="inline-flex items-center justify-center gap-2 text-sm font-medium px-4 py-2 rounded border border-border bg-secondary hover:bg-secondary/80 transition-colors disabled:opacity-50"
                 >
                   {listLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Shield className="w-4 h-4" />}
                   Yenile

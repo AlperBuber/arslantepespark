@@ -565,7 +565,7 @@ içerisinde sizinle iletişime geçecektir. Başvurunuz için teşekkürler!
           </Link>
           <Link 
             to="/" 
-            className="inline-flex items-center gap-2 text-xs md:text-sm font-medium text-charcoal/70 hover:text-bronze transition-colors px-3 py-1.5 rounded-full hover:bg-charcoal/5"
+            className="inline-flex items-center gap-2 text-xs md:text-sm font-medium text-charcoal/70 hover:text-bronze transition-colors px-3 py-1.5 rounded hover:bg-charcoal/5"
           >
             <ArrowLeft className="w-4 h-4" /> Ana Sayfaya Dön
           </Link>
@@ -625,13 +625,13 @@ içerisinde sizinle iletişime geçecektir. Başvurunuz için teşekkürler!
                 <button
                   type="button"
                   onClick={handleDownload}
-                  className="inline-flex items-center justify-center gap-2 bg-secondary hover:bg-secondary/80 text-charcoal font-medium rounded-full px-6 py-3 border border-border transition-colors text-sm"
+                  className="inline-flex items-center justify-center gap-2 bg-secondary hover:bg-secondary/80 text-charcoal font-medium rounded px-6 py-3 border border-border transition-colors text-sm"
                 >
                   <Download className="w-4 h-4" /> Başvuru Özetini İndir (.txt)
                 </button>
                 <Link
                   to="/"
-                  className="inline-flex items-center justify-center gap-2 bg-charcoal hover:bg-charcoal/90 text-ivory font-medium rounded-full px-6 py-3 transition-colors text-sm shadow-soft"
+                  className="inline-flex items-center justify-center gap-2 bg-charcoal hover:bg-charcoal/90 text-ivory font-medium rounded px-6 py-3 transition-colors text-sm shadow-soft"
                 >
                   <Home className="w-4 h-4" /> Ana Sayfaya Dön
                 </Link>
@@ -1184,7 +1184,7 @@ içerisinde sizinle iletişime geçecektir. Başvurunuz için teşekkürler!
                                     key={tag}
                                     type="button"
                                     onClick={() => handleTagToggle(tag)}
-                                    className={`px-3 py-2 rounded-full text-xs font-medium border transition-all ${
+                                    className={`px-3 py-2 rounded text-xs font-medium border transition-all ${
                                       isSelected
                                         ? "bg-bronze border-bronze text-ivory shadow-soft"
                                         : "bg-background border-border text-charcoal/70 hover:bg-secondary/50"
@@ -1550,7 +1550,7 @@ içerisinde sizinle iletişime geçecektir. Başvurunuz için teşekkürler!
                       type="button"
                       onClick={handleBack}
                       disabled={currentStep === 1}
-                      className={`inline-flex items-center gap-2 text-xs md:text-sm font-medium rounded-full px-5 py-2.5 transition-all ${
+                      className={`inline-flex items-center gap-2 text-xs md:text-sm font-medium rounded px-5 py-2.5 transition-all ${
                         currentStep === 1
                           ? "opacity-35 cursor-not-allowed text-charcoal/50 bg-secondary"
                           : "text-charcoal bg-secondary hover:bg-secondary/80 border border-border"
@@ -1563,7 +1563,7 @@ içerisinde sizinle iletişime geçecektir. Başvurunuz için teşekkürler!
                       <button
                         type="button"
                         onClick={handleNext}
-                        className="inline-flex items-center gap-2 text-xs md:text-sm font-semibold bg-charcoal hover:bg-charcoal/90 text-ivory rounded-full px-6 py-2.5 transition-all shadow-soft"
+                        className="inline-flex items-center gap-2 text-xs md:text-sm font-semibold bg-charcoal hover:bg-charcoal/90 text-ivory rounded px-6 py-2.5 transition-all shadow-soft"
                       >
                         Devam Et <ArrowRight className="w-4 h-4" />
                       </button>
@@ -1572,7 +1572,7 @@ içerisinde sizinle iletişime geçecektir. Başvurunuz için teşekkürler!
                         type="button"
                         onClick={handleSubmit}
                         disabled={isSubmitting}
-                        className="inline-flex items-center gap-2 text-xs md:text-sm font-bold bg-gradient-bronze text-charcoal hover:shadow-bronze hover:opacity-95 rounded-full px-7 py-3 transition-all cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="inline-flex items-center gap-2 text-xs md:text-sm font-bold bg-gradient-bronze text-charcoal hover:shadow-bronze hover:opacity-95 rounded px-7 py-3 transition-all cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                       >
                         Başvuruyu Tamamla <Sparkles className="w-4.5 h-4.5 text-charcoal" />
                       </button>

@@ -67,8 +67,8 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        display: ["Outfit", "system-ui", "sans-serif"],
-        sans: ["Inter", "system-ui", "sans-serif"],
+        display: ["Bricolage Grotesque", "system-ui", "sans-serif"],
+        sans: ["Bricolage Grotesque", "system-ui", "sans-serif"],
       },
       boxShadow: {
         soft: "0 4px 20px -2px rgba(28, 27, 24, 0.04), 0 2px 8px -1px rgba(28, 27, 24, 0.02)",

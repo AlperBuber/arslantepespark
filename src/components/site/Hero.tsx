@@ -8,7 +8,7 @@ import heroIllustration from "@/assets/hero-illustration.webp";
 export default function Hero() {
   const { t } = useLang();
   return (
-    <section id="top" className="relative overflow-hidden bg-gradient-to-b from-secondary to-background">
+    <section id="top" className="relative overflow-hidden bg-white">
       <div className="container relative grid items-center gap-12 pt-28 pb-16 md:pt-36 md:pb-24 lg:min-h-[100svh] lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-10">
         <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}>
           <span className="inline-flex items-center gap-2 text-bronze text-xs md:text-sm font-medium uppercase tracking-[0.24em] mb-6">
@@ -17,14 +17,14 @@ export default function Hero() {
           <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-normal text-charcoal leading-[0.95] text-balance">
             {t.hero.title}
           </h1>
-          <p className="mt-6 max-w-xl text-lg md:text-xl text-muted-foreground leading-relaxed">
+          <p className="mt-6 max-w-2xl text-xl md:text-2xl text-muted-foreground leading-relaxed">
             {t.hero.subtitle}
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
-            <Button asChild size="lg" className="bg-gradient-bronze text-charcoal hover:shadow-bronze hover:opacity-95 rounded-full px-7 h-12 font-medium">
+            <Button asChild size="lg" className="bg-gradient-bronze text-charcoal hover:shadow-bronze hover:opacity-95 rounded px-7 h-12 font-medium">
               <Link to="/apply">{t.hero.cta1} <ArrowRight className="ml-1 w-4 h-4" /></Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="bg-transparent border-charcoal/20 text-charcoal hover:bg-charcoal/5 rounded-full px-7 h-12">
+            <Button asChild size="lg" variant="outline" className="bg-transparent border-charcoal/20 text-charcoal hover:bg-charcoal/5 rounded px-7 h-12">
               <a href="#program">{t.hero.cta2}</a>
             </Button>
           </div>

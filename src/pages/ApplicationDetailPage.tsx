@@ -267,7 +267,7 @@ export default function ApplicationDetailPage() {
           <button
             type="button"
             onClick={handleSignOut}
-            className="inline-flex items-center gap-2 text-xs md:text-sm font-medium text-charcoal/70 hover:text-bronze transition-colors px-4 py-2 rounded-full hover:bg-charcoal/5 border border-border print:hidden"
+            className="inline-flex items-center gap-2 text-xs md:text-sm font-medium text-charcoal/70 hover:text-bronze transition-colors px-4 py-2 rounded hover:bg-charcoal/5 border border-border print:hidden"
           >
             <LogOut className="w-4 h-4" /> Çıkış Yap
           </button>
@@ -402,7 +402,7 @@ export default function ApplicationDetailPage() {
                         href={pitchDeckUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-charcoal text-ivory text-sm font-medium hover:bg-charcoal/90 transition-colors print:hidden"
+                        className="inline-flex items-center gap-2 px-5 py-3 rounded bg-charcoal text-ivory text-sm font-medium hover:bg-charcoal/90 transition-colors print:hidden"
                       >
                         <ExternalLink className="w-4 h-4" /> Pitch Deck&apos;i Aç
                       </a>
@@ -412,7 +412,7 @@ export default function ApplicationDetailPage() {
                         href={businessPlanUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-border bg-secondary text-charcoal text-sm font-medium hover:bg-secondary/80 transition-colors print:hidden"
+                        className="inline-flex items-center gap-2 px-5 py-3 rounded border border-border bg-secondary text-charcoal text-sm font-medium hover:bg-secondary/80 transition-colors print:hidden"
                       >
                         <ExternalLink className="w-4 h-4" /> İş Planını Aç
                       </a>

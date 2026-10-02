@@ -65,7 +65,7 @@ export default function ContactFooter() {
                 <Label htmlFor="c-message">Mesajınız</Label>
                 <Textarea id="c-message" rows={4} value={message} onChange={(e) => setMessage(e.target.value)} className="bg-ivory" />
               </div>
-              <Button type="submit" disabled={sending} className="bg-charcoal text-ivory hover:bg-charcoal/90 rounded-full px-6 h-11">
+              <Button type="submit" disabled={sending} className="bg-charcoal text-ivory hover:bg-charcoal/90 rounded px-6 h-11">
                 Gönder <Send className="ml-2 w-4 h-4" />
               </Button>
             </form>
