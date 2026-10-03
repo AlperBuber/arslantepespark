@@ -32,6 +32,8 @@ export default {
           foreground: "hsl(var(--ivory))",
         },
         "bronze-glow": "hsl(var(--bronze-glow))",
+        "bronze-deep": "hsl(var(--bronze-deep))",
+        navy: "hsl(var(--navy))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",

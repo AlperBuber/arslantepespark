@@ -14,11 +14,16 @@ export const translations = {
     hero: {
       eyebrow: "Anadolu'nun Girişimcilik Hareketi",
       title: "Arslantepe Spark",
-      subtitle: "Anadolu'dan doğan teknoloji ve inovasyon kıvılcımı. Malatya merkezli, 12 haftalık yoğun hızlandırma programı.",
+      tagline: "Anadolu'dan doğan teknoloji ve inovasyon kıvılcımı.",
+      subtitle: "Malatya merkezli, Anadolu'nun girişimcilerini destekleyen yoğun bir hızlandırma programı.",
       cta1: "Hemen Başvur",
       cta2: "Programı İncele",
-      stat1: "12 Hafta",
-      stat1Label: "Yoğun Müfredat",
+      stats: [
+        { value: "12 Hafta", label: "Yoğun Hızlandırma" },
+        { value: "Uzman Mentorlar", label: "Alanında Lider İsimler" },
+        { value: "Anadolu Odaklı", label: "Malatya Merkezli" },
+        { value: "Yatırımcı & İş Ortağı Ağı", label: "Büyüme İçin Güçlü Ekosistem" },
+      ],
     },
   },
   en: {
@@ -36,11 +41,16 @@ export const translations = {
     hero: {
       eyebrow: "Entrepreneurship Movement of Anatolia",
       title: "Arslantepe Spark",
-      subtitle: "The tech and innovation spark born in Anatolia. A Malatya-based, 12-week intensive acceleration program.",
+      tagline: "The tech and innovation spark born in Anatolia.",
+      subtitle: "A Malatya-based intensive acceleration program supporting Anatolia's entrepreneurs.",
       cta1: "Apply Now",
       cta2: "Explore Program",
-      stat1: "12 Weeks",
-      stat1Label: "Intensive Curriculum",
+      stats: [
+        { value: "12 Weeks", label: "Intensive Acceleration" },
+        { value: "Expert Mentors", label: "Leaders in Their Fields" },
+        { value: "Anatolia-Focused", label: "Based in Malatya" },
+        { value: "Investor & Partner Network", label: "A Strong Ecosystem for Growth" },
+      ],
     },
   },
 };

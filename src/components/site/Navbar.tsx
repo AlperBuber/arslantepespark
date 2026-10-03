@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { ArrowRight, Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useLang } from "@/i18n/LanguageContext";
@@ -68,35 +68,35 @@ export default function Navbar() {
           </Link>
         )}
 
-        <ul className="hidden lg:flex items-center gap-7 text-sm">
+        <ul className="hidden xl:flex items-center gap-7 text-sm">
           {navItems.map((item) => (
             <li key={item.key}>
-              {renderItem(item, "text-charcoal/75 hover:text-bronze transition-colors")}
+              {renderItem(item, "text-navy/80 hover:text-bronze-deep transition-colors")}
             </li>
           ))}
         </ul>
 
-        <div className="hidden lg:flex items-center gap-3">
-          <Button asChild variant="default" className="bg-charcoal hover:bg-charcoal/90 text-ivory rounded px-5">
-            <Link to="/apply">{t.nav.apply}</Link>
+        <div className="hidden xl:flex items-center gap-3">
+          <Button asChild variant="default" className="bg-bronze-deep hover:bg-bronze-deep/90 text-white h-11 px-6 text-[15px]">
+            <Link to="/apply">{t.nav.apply} <ArrowRight className="ml-2 w-4 h-4" /></Link>
           </Button>
         </div>
 
-        <button onClick={() => setOpen(!open)} className={"lg:hidden p-2 text-charcoal"} aria-label="Menüyü aç/kapat" aria-expanded={open}>
+        <button onClick={() => setOpen(!open)} className={"xl:hidden p-2 text-navy"} aria-label="Menüyü aç/kapat" aria-expanded={open}>
           {open ? <X /> : <Menu />}
         </button>
       </nav>
 
       {open && (
-        <div className="lg:hidden bg-ivory border-t border-border shadow-elegant">
+        <div className="xl:hidden bg-ivory border-t border-border shadow-elegant">
           <ul className="container py-5 space-y-1">
             {navItems.map((item) => (
               <li key={item.key}>
-                {renderItem(item, "block py-2.5 text-charcoal hover:text-bronze", () => setOpen(false))}
+                {renderItem(item, "block py-2.5 text-navy hover:text-bronze-deep", () => setOpen(false))}
               </li>
             ))}
             <li className="pt-3">
-              <Button asChild className="w-full bg-charcoal text-ivory rounded">
+              <Button asChild className="w-full bg-bronze-deep hover:bg-bronze-deep/90 text-white">
                 <Link to="/apply" onClick={() => setOpen(false)}>{t.nav.apply}</Link>
               </Button>
             </li>

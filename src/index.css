@@ -11,6 +11,8 @@
     --ivory: 40 15% 98%; /* #fbfaf7 */
     --bronze: 31 38% 52%; /* #b58255 */
     --bronze-glow: 31 80% 65%;
+    --bronze-deep: 32 50% 41%; /* #9c6c34 — beyaz yazıyla 4.5:1 kontrast */
+    --navy: 210 50% 14%; /* #122436 */
 
     --card: 0 0% 100%;
     --card-foreground: 40 10% 11%;
