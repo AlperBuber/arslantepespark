@@ -4,6 +4,7 @@ export const translations = {
       about: "Program Hakkında",
       program: "Program Hedefleri",
       modules: "Eğitim Modülleri",
+      who: "Kimler Katılabilir",
       mentors: "Mentorlarımız",
       timeline: "Takvim",
       supporters: "Destekleyenler",
@@ -12,10 +13,11 @@ export const translations = {
       apply: "Başvur",
     },
     hero: {
-      eyebrow: "Anadolu'nun Girişimcilik Hareketi",
+      eyebrow: "Anadolu’nun Girişimcilik Programı",
       title: "Arslantepe Spark",
-      tagline: "Anadolu'dan doğan teknoloji ve inovasyon kıvılcımı.",
-      subtitle: "Malatya merkezli, Anadolu'nun girişimcilerini destekleyen yoğun bir hızlandırma programı.",
+      // Masaüstünde iki satır (maketteki kırılım), dar ekranda doğal akış
+      tagline: ["Anadolu’dan doğan", "teknoloji ve inovasyon kıvılcımı."],
+      subtitle: "Malatya merkezli, Anadolu’nun girişimcilerini destekleyen yoğun bir hızlandırma programı.",
       cta1: "Hemen Başvur",
       cta2: "Programı İncele",
       stats: [
@@ -31,6 +33,7 @@ export const translations = {
       about: "About",
       program: "Goals",
       modules: "Modules",
+      who: "Who Can Apply",
       mentors: "Our Mentors",
       timeline: "Timeline",
       supporters: "Supporters",
@@ -39,9 +42,9 @@ export const translations = {
       apply: "Apply Now",
     },
     hero: {
-      eyebrow: "Entrepreneurship Movement of Anatolia",
+      eyebrow: "Anatolia's Entrepreneurship Program",
       title: "Arslantepe Spark",
-      tagline: "The tech and innovation spark born in Anatolia.",
+      tagline: ["The tech and innovation", "spark born in Anatolia."],
       subtitle: "A Malatya-based intensive acceleration program supporting Anatolia's entrepreneurs.",
       cta1: "Apply Now",
       cta2: "Explore Program",

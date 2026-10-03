@@ -3,22 +3,31 @@ import { ArrowRight, Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useLang } from "@/i18n/LanguageContext";
-import logo from "@/assets/logo-full.png";
+import lion from "@/assets/logo-lion-tight.png";
 
 type NavItem =
-  | { key: "about" | "program" | "modules" | "timeline" | "supporters" | "faq" | "contact"; type: "anchor" }
+  | { key: "about" | "program" | "who" | "timeline" | "supporters" | "faq"; type: "anchor" }
   | { key: "mentors"; type: "page"; to: string };
 
 const navItems: NavItem[] = [
   { key: "about", type: "anchor" },
   { key: "program", type: "anchor" },
-  { key: "modules", type: "anchor" },
+  { key: "who", type: "anchor" },
   { key: "mentors", type: "page", to: "/mentors" },
   { key: "timeline", type: "anchor" },
   { key: "supporters", type: "anchor" },
   { key: "faq", type: "anchor" },
-  { key: "contact", type: "anchor" },
 ];
+
+// Resmi aslan ikonu + tek satır yazı (giriş bölümü maketindeki logo düzeni)
+function Brand() {
+  return (
+    <span className="flex items-center gap-3 xl:ml-6 xl:gap-4">
+      <img src={lion} alt="" className="h-10 xl:h-[49px] w-auto" width={278} height={494} />
+      <span className="font-display text-[22px] xl:text-[31px] font-medium leading-none text-bronze-deep whitespace-nowrap">Arslantepe Spark</span>
+    </span>
+  );
+}
 
 export default function Navbar() {
   const { t } = useLang();
@@ -57,28 +66,28 @@ export default function Navbar() {
 
   return (
     <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${scrolled ? "bg-ivory/85 backdrop-blur-md border-b border-border shadow-soft" : "bg-transparent"}`}>
-      <nav className="container flex items-center justify-between h-16 md:h-20" aria-label="Birincil">
+      <nav className="container flex items-center justify-between h-16 md:h-20 xl:h-[94px]" aria-label="Birincil">
         {isHome ? (
-          <a href="#top" className="flex items-center group">
-            <img src={logo} alt="Arslantepe Spark — Girişim Hızlandırma Programı" className="h-9 md:h-11 w-auto object-contain" width={463} height={93} />
+          <a href="#top" className="flex items-center group" aria-label="Arslantepe Spark — Girişim Hızlandırma Programı">
+            <Brand />
           </a>
         ) : (
-          <Link to="/" className="flex items-center group">
-            <img src={logo} alt="Arslantepe Spark — Girişim Hızlandırma Programı" className="h-9 md:h-11 w-auto object-contain" width={463} height={93} />
+          <Link to="/" className="flex items-center group" aria-label="Arslantepe Spark — Girişim Hızlandırma Programı">
+            <Brand />
           </Link>
         )}
 
-        <ul className="hidden xl:flex items-center gap-7 text-sm">
+        <ul className="hidden xl:flex xl:ml-[6px] items-center gap-[26px] text-[13px] font-medium">
           {navItems.map((item) => (
             <li key={item.key}>
-              {renderItem(item, "text-navy/80 hover:text-bronze-deep transition-colors")}
+              {renderItem(item, "text-navy hover:text-bronze-deep transition-colors")}
             </li>
           ))}
         </ul>
 
         <div className="hidden xl:flex items-center gap-3">
-          <Button asChild variant="default" className="bg-bronze-deep hover:bg-bronze-deep/90 text-white h-11 px-6 text-[15px]">
-            <Link to="/apply">{t.nav.apply} <ArrowRight className="ml-2 w-4 h-4" /></Link>
+          <Button asChild variant="default" className="bg-bronze-deep hover:bg-bronze-deep/90 text-white h-[47px] w-[149px] px-0 text-[17px] font-normal">
+            <Link to="/apply">{t.nav.apply} <ArrowRight className="ml-3 w-[18px] h-[18px]" strokeWidth={1.75} /></Link>
           </Button>
         </div>
 

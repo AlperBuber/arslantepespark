@@ -33,7 +33,12 @@ export default {
         },
         "bronze-glow": "hsl(var(--bronze-glow))",
         "bronze-deep": "hsl(var(--bronze-deep))",
+        rust: "hsl(var(--rust))",
         navy: "hsl(var(--navy))",
+        periwinkle: {
+          DEFAULT: "hsl(var(--periwinkle))",
+          deep: "hsl(var(--periwinkle-deep))",
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",

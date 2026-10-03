@@ -11,8 +11,12 @@
     --ivory: 40 15% 98%; /* #fbfaf7 */
     --bronze: 31 38% 52%; /* #b58255 */
     --bronze-glow: 31 80% 65%;
-    --bronze-deep: 32 50% 41%; /* #9c6c34 — beyaz yazıyla 4.5:1 kontrast */
-    --navy: 210 50% 14%; /* #122436 */
+    /* Giriş bölümü maketinin renkleri */
+    --bronze-deep: 26 56% 43%; /* #aa6430 — maketteki #b06c34'ün beyaz yazıyla 4.5:1 veren tonu */
+    --rust: 26 78% 40%; /* #b45a16 — eyebrow, yıldız ve şerit ikonları */
+    --navy: 226 77% 17%; /* #0a1a4d */
+    --periwinkle: 224 32% 59%; /* #7486b8 — büyük gövde metni (3:1 üstü) */
+    --periwinkle-deep: 225 28% 51%; /* #5f71a6 — küçük etiketler (4.5:1 üstü) */
 
     --card: 0 0% 100%;
     --card-foreground: 40 10% 11%;
