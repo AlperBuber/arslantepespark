@@ -4,7 +4,6 @@ import About from "@/components/site/About";
 import WhyMalatya from "@/components/site/WhyMalatya";
 import Goals from "@/components/site/Goals";
 import WhoCanApply from "@/components/site/WhoCanApply";
-import Journey from "@/components/site/Journey";
 import Modules from "@/components/site/Modules";
 import Timeline from "@/components/site/Timeline";
 import Supporters from "@/components/site/Supporters";
@@ -21,7 +20,6 @@ export default function Index() {
       <WhyMalatya />
       <Goals />
       <WhoCanApply />
-      <Journey />
       <Modules />
       <Timeline />
       <Supporters />
