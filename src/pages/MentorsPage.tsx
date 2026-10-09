@@ -18,6 +18,7 @@ import furkanOzpolat from "@/assets/mentors/furkan-ozpolat.jpg";
 import gokhanTuncel from "@/assets/mentors/gokhan-tuncel.jpg";
 import gonulKamali from "@/assets/mentors/gonul-kamali.jpg";
 import gulsahCakir from "@/assets/mentors/gulsah-cakir.jpg";
+import hacerIlhan from "@/assets/mentors/hacer-ilhan.jpg";
 import hasanYilmaz from "@/assets/mentors/hasan-yilmaz.jpg";
 import hurcanCoskun from "@/assets/mentors/hurcan-coskun.jpg";
 import ibrahimGezer from "@/assets/mentors/ibrahim-gezer.jpg";
@@ -27,6 +28,7 @@ import merveSusutKurc from "@/assets/mentors/merve-susut-kurc.png";
 import mineDedekoca from "@/assets/mentors/mine-dedekoca.jpg";
 import mustafaAtes from "@/assets/mentors/mustafa-ates.jpg";
 import nevraDuyguDuru from "@/assets/mentors/nevra-duygu-duru.jpg";
+import osmanYagiz from "@/assets/mentors/osman-yagiz.jpg";
 import omerHantal from "@/assets/mentors/omer-hantal.jpg";
 import ozcanCavus from "@/assets/mentors/ozcan-cavus.jpg";
 import sadikKoseoglu from "@/assets/mentors/sadik-koseoglu.jpg";
@@ -128,6 +130,12 @@ const mentors: Mentor[] = [
     photo: gulsahCakir,
   },
   {
+    name: "Hacer İlhan",
+    role: "Mimsan Grup, Yönetim Kurulu Üyesi ve Satış & Pazarlama Müdürü",
+    linkedin: "https://www.linkedin.com/in/hacer-ilhan-96983a92/",
+    photo: hacerIlhan,
+  },
+  {
     name: "Doç. Dr. Hasan Yılmaz",
     role: "Malatya Teknokent Genel Müdürü",
     linkedin: "https://www.linkedin.com/in/hasan-y%C4%B1lmaz-7a3b57210/",
@@ -184,6 +192,12 @@ const mentors: Mentor[] = [
     role: "B-Connector, Arslantepe Spark Program Direktörü",
     linkedin: "https://www.linkedin.com/in/nevraduyguduru/",
     photo: nevraDuyguDuru,
+  },
+  {
+    name: "Osman Yağız",
+    role: "Genel Müdür",
+    linkedin: "https://www.linkedin.com/in/osman-yagiz-91564242/",
+    photo: osmanYagiz,
   },
   {
     name: "Ömer Hantal",
