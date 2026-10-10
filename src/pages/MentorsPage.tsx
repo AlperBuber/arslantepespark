@@ -195,7 +195,7 @@ const mentors: Mentor[] = [
   },
   {
     name: "Osman Yağız",
-    role: "Genel Müdür",
+    role: "Ekomaxi, Genel Müdür",
     linkedin: "https://www.linkedin.com/in/osman-yagiz-91564242/",
     photo: osmanYagiz,
   },
