@@ -31,6 +31,7 @@ import nevraDuyguDuru from "@/assets/mentors/nevra-duygu-duru.jpg";
 import osmanYagiz from "@/assets/mentors/osman-yagiz.jpg";
 import omerHantal from "@/assets/mentors/omer-hantal.jpg";
 import ozcanCavus from "@/assets/mentors/ozcan-cavus.jpg";
+import perihanCelik from "@/assets/mentors/perihan-celik.jpg";
 import sadikKoseoglu from "@/assets/mentors/sadik-koseoglu.jpg";
 import selimAgca from "@/assets/mentors/selim-agca.jpg";
 import selimYazici from "@/assets/mentors/selim-yazici.jpg";
@@ -210,6 +211,12 @@ const mentors: Mentor[] = [
     role: "Dativa, Kurucu",
     linkedin: "https://www.linkedin.com/in/ozcancavus/",
     photo: ozcanCavus,
+  },
+  {
+    name: "Perihan Çelik",
+    role: "Malatya Teknokent, Genel Koordinatör",
+    linkedin: "https://www.linkedin.com/in/perihan-%C3%A7elik-47012990/",
+    photo: perihanCelik,
   },
   {
     name: "Sadık Köseoğlu",
