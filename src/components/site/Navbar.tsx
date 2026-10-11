@@ -77,7 +77,7 @@ export default function Navbar() {
           </Link>
         )}
 
-        <ul className="hidden xl:flex xl:ml-[6px] items-center gap-[26px] text-[13px] font-medium">
+        <ul className="hidden xl:flex xl:ml-[6px] items-center gap-[18px] min-[1400px]:gap-[26px] text-[0.95rem] font-medium whitespace-nowrap">
           {navItems.map((item) => (
             <li key={item.key}>
               {renderItem(item, "text-navy hover:text-bronze-deep transition-colors")}
