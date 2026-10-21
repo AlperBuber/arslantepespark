@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet-async";
 const faqs = [
   { q: "Arslantepe Spark hisse karşılığında mı?", a: "Programın kendisi hisse almaz. Melek yatırımcı ağımız veya gelecekteki Arslantepe VC fonu üzerinden gelen opsiyonel yatırımlar, ayrı ve standart piyasa koşullarıyla yürütülür." },
   { q: "Program hangi dilde yürütülüyor?", a: "Program tamamen Türkçe yürütülür. Müfredat, atölyeler, mentor seansları ve tüm değerlendirmeler Türkçedir; uluslararası fon toplamaya hazırlık için seçili İngilizce kaynaklar da paylaşılır." },
-  { q: "Girişimcilerin Malatya'ya taşınması gerekiyor mu?", a: "Girişimcilerin açılış haftasında ve Sunum Günü'nde Malatya'da bulunması beklenir. Bu dönemlerin dışında hibrit katılım desteklenir." },
+  { q: "Girişimcilerin Malatya'ya taşınması gerekiyor mu?", a: "Girişimcilerin Aralık 2026'daki program başlangıç etkinliğinde ve Mart 2027'deki Sunum Günü'nde Malatya'da bulunması beklenir. Program bu günler dışında çevrim içi olarak yürütülür." },
   { q: "Programın maliyeti nedir?", a: "Programa katılım için herhangi bir nakit ücret talep edilmez." },
   { q: "Tek başına kurucular başvurabilir mi?", a: "Evet, ancak en az iki kişilik bir kurucu ekibi şiddetle öneririz — müfredat ve iş yükü ekip yürütmesi göz önüne alınarak tasarlanmıştır." },
   { q: "Bir sonraki döneme ne zaman başvurabilirim?", a: "Başvurular Ekim – Kasım 2026 döneminde açıktır. Bültenimize abone olarak başvuru takvimini takip edebilirsiniz." },

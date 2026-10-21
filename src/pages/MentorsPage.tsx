@@ -24,9 +24,11 @@ import hurcanCoskun from "@/assets/mentors/hurcan-coskun.jpg";
 import ibrahimGezer from "@/assets/mentors/ibrahim-gezer.jpg";
 import inalcanGulec from "@/assets/mentors/inalcan-gulec.jpg";
 import ismailHaznedar from "@/assets/mentors/ismail-haznedar.png";
+import kubraAslanYilmaz from "@/assets/mentors/kubra-aslan-yilmaz.jpg";
 import merveSusutKurc from "@/assets/mentors/merve-susut-kurc.png";
 import mineDedekoca from "@/assets/mentors/mine-dedekoca.jpg";
 import mustafaAtes from "@/assets/mentors/mustafa-ates.jpg";
+import mustafaTecdelioglu from "@/assets/mentors/mustafa-tecdelioglu.jpg";
 import nevraDuyguDuru from "@/assets/mentors/nevra-duygu-duru.jpg";
 import osmanYagiz from "@/assets/mentors/osman-yagiz.jpg";
 import omerHantal from "@/assets/mentors/omer-hantal.jpg";
@@ -166,6 +168,12 @@ const mentors: Mentor[] = [
     photo: ismailHaznedar,
   },
   {
+    name: "Dr. Kübra Aslan Yılmaz",
+    role: "Malatya Turgut Özal Üniversitesi, Doktor",
+    linkedin: "https://www.linkedin.com/in/dr-k%C3%BCbra-aslan-y%C4%B1lmaz-96a5a3105",
+    photo: kubraAslanYilmaz,
+  },
+  {
     name: "M. Engin Satana",
     role: "Dopigo, Kurucu Ortak & Genel Müdür",
     linkedin: "https://www.linkedin.com/in/m-engin-satana-7208054/",
@@ -187,6 +195,12 @@ const mentors: Mentor[] = [
     name: "Prof. Dr. Mustafa Ateş",
     role: "Medicana Zincirlikuyu Hastanesi, Genel Cerrahi Uzmanı",
     photo: mustafaAtes,
+  },
+  {
+    name: "Mustafa Tecdelioğlu",
+    role: "Çetin Cıvata, Yönetim Kurulu Başkanı",
+    linkedin: "https://www.linkedin.com/in/mustafa-tecdelio%C4%9Flu-41aa5b211/",
+    photo: mustafaTecdelioglu,
   },
   {
     name: "Nevra Duygu Duru",
