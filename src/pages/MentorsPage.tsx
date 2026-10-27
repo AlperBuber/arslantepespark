@@ -176,7 +176,7 @@ const mentors: Mentor[] = [
   },
   {
     name: "Dr. Kübra Aslan Yılmaz",
-    role: "Malatya Turgut Özal Üniversitesi, Doktor",
+    role: "Malatya Turgut Özal Üniversitesi, Akademisyen",
     linkedin: "https://www.linkedin.com/in/dr-k%C3%BCbra-aslan-y%C4%B1lmaz-96a5a3105",
     photo: kubraAslanYilmaz,
   },
