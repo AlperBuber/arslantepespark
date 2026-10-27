@@ -19,6 +19,7 @@ import gokhanTuncel from "@/assets/mentors/gokhan-tuncel.jpg";
 import gonulKamali from "@/assets/mentors/gonul-kamali.jpg";
 import gulsahCakir from "@/assets/mentors/gulsah-cakir.jpg";
 import hacerIlhan from "@/assets/mentors/hacer-ilhan.jpg";
+import hakanErkus from "@/assets/mentors/hakan-erkus.jpg";
 import hasanYilmaz from "@/assets/mentors/hasan-yilmaz.jpg";
 import hurcanCoskun from "@/assets/mentors/hurcan-coskun.jpg";
 import ibrahimGezer from "@/assets/mentors/ibrahim-gezer.jpg";
@@ -137,6 +138,12 @@ const mentors: Mentor[] = [
     role: "Mimsan Grup, Yönetim Kurulu Üyesi ve Satış & Pazarlama Müdürü",
     linkedin: "https://www.linkedin.com/in/hacer-ilhan-96983a92/",
     photo: hacerIlhan,
+  },
+  {
+    name: "Hakan Erkuş",
+    role: "İnönü Üniversitesi, Akademisyen",
+    linkedin: "https://www.linkedin.com/in/hakan-erkus-95180139",
+    photo: hakanErkus,
   },
   {
     name: "Doç. Dr. Hasan Yılmaz",
