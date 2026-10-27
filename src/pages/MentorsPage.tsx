@@ -26,6 +26,7 @@ import ibrahimGezer from "@/assets/mentors/ibrahim-gezer.jpg";
 import inalcanGulec from "@/assets/mentors/inalcan-gulec.jpg";
 import ismailHaznedar from "@/assets/mentors/ismail-haznedar.png";
 import kubraAslanYilmaz from "@/assets/mentors/kubra-aslan-yilmaz.jpg";
+import mehmetOlmez from "@/assets/mentors/mehmet-olmez.jpg";
 import merveSusutKurc from "@/assets/mentors/merve-susut-kurc.png";
 import mineDedekoca from "@/assets/mentors/mine-dedekoca.jpg";
 import mustafaAtes from "@/assets/mentors/mustafa-ates.jpg";
@@ -34,6 +35,7 @@ import nevraDuyguDuru from "@/assets/mentors/nevra-duygu-duru.jpg";
 import osmanYagiz from "@/assets/mentors/osman-yagiz.jpg";
 import omerHantal from "@/assets/mentors/omer-hantal.jpg";
 import ozcanCavus from "@/assets/mentors/ozcan-cavus.jpg";
+import ozgeOzturk from "@/assets/mentors/ozge-ozturk.jpg";
 import perihanCelik from "@/assets/mentors/perihan-celik.jpg";
 import sadikKoseoglu from "@/assets/mentors/sadik-koseoglu.jpg";
 import selimAgca from "@/assets/mentors/selim-agca.jpg";
@@ -187,6 +189,11 @@ const mentors: Mentor[] = [
     photo: enginSatana,
   },
   {
+    name: "Doç. Dr. Mehmet Ölmez",
+    role: "İnönü Üniversitesi Teknoloji Transfer Ofisi, Üniversite Sanayi İşbirliği Uzmanı",
+    photo: mehmetOlmez,
+  },
+  {
     name: "Merve Şuşut Kurç",
     role: "Lookup, İnsan Kaynakları Danışmanı",
     linkedin: "https://www.linkedin.com/in/merve-%C5%9Fu%C5%9Fut-kur%C3%A7-3749a6236/",
@@ -232,6 +239,12 @@ const mentors: Mentor[] = [
     role: "Dativa, Kurucu",
     linkedin: "https://www.linkedin.com/in/ozcancavus/",
     photo: ozcanCavus,
+  },
+  {
+    name: "Dr. Özge Öztürk",
+    role: "İnönü Üniversitesi Teknoloji Transfer Ofisi, Türk Patent ve Marka Kurumu Sınai Mülkiyet Danışmanı",
+    linkedin: "https://www.linkedin.com/in/dr-%C3%B6zge-%C3%B6zt%C3%BCrk-25b838111/",
+    photo: ozgeOzturk,
   },
   {
     name: "Perihan Çelik",
