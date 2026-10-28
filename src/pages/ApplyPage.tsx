@@ -65,6 +65,40 @@ const INITIAL_FORM_DATA = {
 
 const toBool = (value: string) => value === "Evet";
 
+const MAX_PDF_SIZE_MB = 20;
+
+// Supabase Storage yalnızca ASCII anahtar kabul eder ("İ", "ş" vb. → "Invalid key").
+// Dosya adını güvenli ASCII'ye çevirir: "PEMBE EV HOBİ.pdf" → "PEMBE-EV-HOBI.pdf"
+const toStorageSafeName = (fileName: string) => {
+  const base = fileName
+    .replace(/\.pdf$/i, "")
+    .replace(/ı/g, "i")
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .replace(/[^A-Za-z0-9_-]+/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "")
+    .slice(0, 80);
+  return `${base || "belge"}.pdf`;
+};
+
+// Bazı tarayıcılar (özellikle Android/Windows) PDF için boş MIME tipi döndürür.
+const isPdfFile = (file: File) =>
+  file.type === "application/pdf" || /\.pdf$/i.test(file.name);
+
+const toUploadErrorMessage = (err: unknown) => {
+  const raw = err instanceof Error ? err.message : String(err ?? "");
+  if (/failed to fetch|network|load failed/i.test(raw)) {
+    return "İnternet bağlantısı kurulamadı. Bağlantınızı kontrol edip tekrar deneyin.";
+  }
+  if (/exceeded the maximum allowed size|payload too large|413/i.test(raw)) {
+    return `Dosya boyutu çok büyük. Lütfen ${MAX_PDF_SIZE_MB}MB'ı aşmayan bir PDF yükleyin.`;
+  }
+  return raw
+    ? `Beklenmeyen bir hata oluştu, lütfen tekrar deneyin. (Detay: ${raw})`
+    : "Başvuru gönderilirken beklenmeyen bir hata oluştu.";
+};
+
 const TURKISH_CITIES = [
   "Adana", "Adıyaman", "Afyonkarahisar", "Ağrı", "Amasya", "Ankara", "Antalya", "Artvin", "Aydın", "Balıkesir",
   "Bilecik", "Bingöl", "Bitlis", "Bolu", "Burdur", "Bursa", "Çanakkale", "Çankırı", "Çorum", "Denizli",
@@ -205,9 +239,19 @@ export default function ApplyPage() {
   // Mock File Uploads
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>, fieldName: 'pitchDeck' | 'businessPlan') => {
     const file = e.target.files?.[0];
+    // Aynı dosya reddedildikten sonra tekrar seçilebilsin diye input'u sıfırla
+    e.target.value = "";
     if (file) {
-      if (file.type !== "application/pdf") {
+      if (!isPdfFile(file)) {
         toast.error("Yalnızca PDF formatındaki belgeler kabul edilmektedir.");
+        return;
+      }
+      if (file.size > MAX_PDF_SIZE_MB * 1024 * 1024) {
+        toast.error(`Dosya ${MAX_PDF_SIZE_MB}MB sınırını aşıyor. Lütfen daha küçük bir PDF yükleyin.`);
+        return;
+      }
+      if (file.size === 0) {
+        toast.error("Seçilen dosya boş görünüyor. Lütfen geçerli bir PDF yükleyin.");
         return;
       }
       const sizeStr = (file.size / (1024 * 1024)).toFixed(2) + " MB";
@@ -355,7 +399,7 @@ export default function ApplyPage() {
   };
 
   const uploadPdf = async (file: File): Promise<string> => {
-    const path = `${crypto.randomUUID()}-${file.name}`;
+    const path = `${crypto.randomUUID()}-${toStorageSafeName(file.name)}`;
     const { data, error } = await supabase.storage
       .from("basvuru-belgeler")
       .upload(path, file, { contentType: "application/pdf" });
@@ -450,11 +494,7 @@ export default function ApplyPage() {
       toast.success("Başvurunuz başarıyla gönderildi!");
     } catch (err) {
       console.error(err);
-      const message =
-        err instanceof Error
-          ? err.message
-          : "Başvuru gönderilirken beklenmeyen bir hata oluştu.";
-      toast.error(`Başvuru gönderilemedi: ${message}`);
+      toast.error(`Başvuru gönderilemedi: ${toUploadErrorMessage(err)}`);
     } finally {
       setIsSubmitting(false);
       setSubmitStage(0);
@@ -1467,7 +1507,7 @@ içerisinde sizinle iletişime geçecektir. Başvurunuz için teşekkürler!
                               <label className="flex flex-col items-center justify-center border-2 border-dashed border-border hover:border-bronze/50 rounded-2xl p-8 bg-secondary/20 hover:bg-secondary/40 transition-colors cursor-pointer text-center">
                                 <input
                                   type="file"
-                                  accept=".pdf"
+                                  accept="application/pdf,.pdf"
                                   onChange={(e) => handleFileUpload(e, "pitchDeck")}
                                   className="hidden"
                                 />
@@ -1508,7 +1548,7 @@ içerisinde sizinle iletişime geçecektir. Başvurunuz için teşekkürler!
                               <label className="flex flex-col items-center justify-center border-2 border-dashed border-border hover:border-bronze/50 rounded-2xl p-8 bg-secondary/20 hover:bg-secondary/40 transition-colors cursor-pointer text-center">
                                 <input
                                   type="file"
-                                  accept=".pdf"
+                                  accept="application/pdf,.pdf"
                                   onChange={(e) => handleFileUpload(e, "businessPlan")}
                                   className="hidden"
                                 />
