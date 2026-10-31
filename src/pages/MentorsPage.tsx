@@ -90,7 +90,7 @@ const mentors: Mentor[] = [
   },
   {
     name: "Barış Karakullukçu",
-    role: "Yapay Zeka ve Teknoloji Derneği Yönetim Kurulu Başkanı ve Aionire Kurucusu",
+    role: "Yapay Zeka ve Teknoloji Derneği Yönetim Kurulu Başkanı ve AIONIRE Kurucusu",
     linkedin: "https://www.linkedin.com/in/baris-karakullukcu/",
     photo: barisKarakullukcu,
   },
@@ -142,7 +142,7 @@ const mentors: Mentor[] = [
     photo: hacerIlhan,
   },
   {
-    name: "Hakan Erkuş",
+    name: "Prof. Dr. Hakan Erkuş",
     role: "İnönü Üniversitesi, Akademisyen",
     linkedin: "https://www.linkedin.com/in/hakan-erkus-95180139",
     photo: hakanErkus,
@@ -284,7 +284,7 @@ const mentors: Mentor[] = [
   },
   {
     name: "Sibel Soyak Esder",
-    role: "Rezonans, Kurucu",
+    role: "Rezonans Girişim Servisleri",
     linkedin: "https://www.linkedin.com/in/sibel-soyak-esder/",
     photo: sibelSoyakEsder,
   },
@@ -308,7 +308,7 @@ const mentors: Mentor[] = [
   },
   {
     name: "Tunç Berkman",
-    role: "QMindLab - Partner | Marka & Pazarlama Stratejisti",
+    role: "TBS Investment & Management Ortak | Marka & Pazarlama Stratejisti",
     linkedin: "https://www.linkedin.com/in/tuncberkman/",
     photo: tuncBerkman,
   },
@@ -393,7 +393,7 @@ export default function MentorsPage() {
           id="mentors-list"
           eyebrow="Mentor Ağı"
           title={<>Mentorlarımız — yol gösteren <span className="text-bronze">deneyimli</span> bir ekip.</>}
-          intro="Girişimcilerimize birebir zaman ayıran operatörler, yatırımcılar, kurumsal yöneticiler ve alan uzmanlarından oluşan mentor ağımızla tanışın."
+          intro="Girişimcilerimize destek olan yatırımcılar, kurumsal yöneticiler ve farklı alanlardan uzmanların yer aldığı mentor ağımızla tanışın."
           filigree
         >
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
