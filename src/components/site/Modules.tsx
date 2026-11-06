@@ -1,18 +1,18 @@
 import Section from "./Section";
 
 const modules = [
-  { t: "Girişimcilik & İş Modeli", d: "Problem–çözüm uyumu, değer önerisi, iş modeli ve startup mantığı." },
-  { t: "Müşteri Doğrulama", d: "Hedef müşteri, kullanıcı görüşmeleri, ihtiyaç analizi ve ürün-pazar uyumu." },
-  { t: "Ürün & Teknoloji", d: "MVP yaklaşımı, ürün yol haritası ve teknoloji stratejisi." },
-  { t: "Pazarlama & Satış", d: "Pazara giriş, konumlandırma, satış kanalları ve ilk müşteri kazanımı." },
-  { t: "Finans & Yatırım", d: "Finansman kaynakları, temel finansal planlama ve yatırımcıya hazırlık." },
-  { t: "Pitching", d: "Hikâye kurgusu, pitch deck, yatırımcı sunumu ve soru-cevap hazırlığı." },
-  { t: "Kurumsal İş Birliği", d: "Büyük şirketlerle çalışma, PoC tasarımı ve B2B iş geliştirme." },
-  { t: "Hukuk & Etik", d: "Şirketleşme, fikri mülkiyet ve girişimcinin temel hukuki sorumlulukları." },
-  { t: "Liderlik & Ekip", d: "Kurucu ekip, görev paylaşımı, liderlik ve girişim kültürü." },
-  { t: "Sürdürülebilirlik", d: "Etki odaklı girişimcilik ve sürdürülebilir büyüme yaklaşımı." },
-  { t: "Büyüme", d: "Ölçeklenebilirlik, KPI'lar ve büyüme stratejileri." },
-  { t: "Globalleşme", d: "Yeni pazarlara açılma ve uluslararası iş geliştirme." },
+  { t: "Program Başlangıcı ve Girişim Analizi", d: "10 Aralık 2026" },
+  { t: "Problem ve Müşteri Keşfi", d: "17 Aralık 2026" },
+  { t: "Değer Önerisi ve Ürün-Pazar Uyumu", d: "24 Aralık 2026" },
+  { t: "Ürün ve Minimum Uygulanabilir Ürün (MVP)", d: "7 Ocak 2027" },
+  { t: "İş Modeli ve Fiyatlandırma", d: "14 Ocak 2027" },
+  { t: "Pazara Giriş Stratejisi", d: "21 Ocak 2027" },
+  { t: "B2B Satış ve Kurumsal Konsept Doğrulama (PoC)", d: "28 Ocak 2027" },
+  { t: "Büyüme ve Dijital Pazarlama", d: "4 Şubat 2027" },
+  { t: "Finansal Model ve Girişim Metrikleri", d: "11 Şubat 2027" },
+  { t: "Yatırıma Hazırlık ve Değerleme", d: "18 Şubat 2027" },
+  { t: "Yatırımcı Sunumu ve Yatırımcı İletişimi", d: "25 Şubat 2027" },
+  { t: "Sunum Provaları ve Demo Günü Hazırlığı", d: "4 Mart 2027" },
 ];
 
 export default function Modules() {
