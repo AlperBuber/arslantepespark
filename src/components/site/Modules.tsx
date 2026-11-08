@@ -1,4 +1,5 @@
 import Section from "./Section";
+import PromoVideo from "./PromoVideo";
 
 const modules = [
   { t: "Program Başlangıcı ve Girişim Analizi", d: "10 Aralık 2026" },
@@ -24,6 +25,7 @@ export default function Modules() {
       intro="Programda, kurucu zihniyeti ve müşteri keşfinden başlayarak ürün geliştirme, pazara açılma ve büyüme konularına, yatırıma hazırlık süreçlerine, kurumsal iş birliklerine ilişkin eğitimler yer almaktadır. Program, girişimlerin yatırımcılar ve kurumsal ortaklarla buluşacağı bir sunum günüyle tamamlanacaktır."
       variant="dark"
     >
+      <PromoVideo />
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-ivory/10 rounded-2xl overflow-hidden">
         {modules.map((m, i) => (
           <div key={i} className="bg-charcoal p-6 hover:bg-charcoal/60 transition-colors duration-300 group">
