@@ -1,7 +1,7 @@
 import Section from "./Section";
 
 const timeline = [
-  { m: "Ekim – Kasım 2026", t: "Başvurular", d: "Anadolu'nun her köşesini kapsayan açık çağrı, üniversite ve inovasyon merkezi tanıtım toplantıları." },
+  { m: "Ekim – Kasım 2026", t: "Başvurular", d: "Anadolu'nun her köşesini kapsayan açık çağrı, üniversite ve inovasyon merkezi tanıtım toplantıları. Son başvuru 23 Kasım 2026; katılımcılar 26 Kasım 2026'da belirlenir." },
   { m: "Aralık 2026", t: "Program Başlangıcı", d: "Seçilen girişimler Malatya'da Arslantepe Spark merkezinde Türkçe müfredatla yola çıkar." },
   { m: "Mart 2027", t: "Sunum Günü", d: "Yatırımcılar, melek yatırımcılar ve kurumsal ortaklara açık sunum günü." },
 ];

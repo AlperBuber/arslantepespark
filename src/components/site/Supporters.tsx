@@ -1,12 +1,10 @@
 import Section from "./Section";
 import inonu from "@/assets/partner-inonu.png";
 import bilgem from "@/assets/partner-bilgem.png";
-import malatyaTeknokent from "@/assets/partner-malatya-teknokent.png";
 
 const supporters = [
   { name: "İnönü Üniversitesi", src: inonu },
   { name: "TÜBİTAK BİLGEM", src: bilgem },
-  { name: "Malatya Teknokent", src: malatyaTeknokent },
 ];
 
 export default function Supporters() {

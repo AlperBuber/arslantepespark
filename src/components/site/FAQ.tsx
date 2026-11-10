@@ -8,7 +8,7 @@ const faqs = [
   { q: "Girişimcilerin Malatya'ya taşınması gerekiyor mu?", a: "Girişimcilerin Aralık 2026'daki program başlangıç etkinliğinde ve Mart 2027'deki Sunum Günü'nde Malatya'da bulunması beklenir. Program bu günler dışında çevrim içi olarak yürütülür." },
   { q: "Programın maliyeti nedir?", a: "Programa katılım için herhangi bir nakit ücret talep edilmez." },
   { q: "Tek başına kurucular başvurabilir mi?", a: "Evet, ancak en az iki kişilik bir kurucu ekibi şiddetle öneririz — müfredat ve iş yükü ekip yürütmesi göz önüne alınarak tasarlanmıştır." },
-  { q: "Bir sonraki döneme ne zaman başvurabilirim?", a: "Başvurular Ekim – Kasım 2026 döneminde açıktır. Bültenimize abone olarak başvuru takvimini takip edebilirsiniz." },
+  { q: "Bir sonraki döneme ne zaman başvurabilirim?", a: "Başvurular Ekim – Kasım 2026 döneminde açıktır; son başvuru tarihi 23 Kasım 2026'dır. Katılımcılar 26 Kasım 2026'da belirlenir. Bültenimize abone olarak başvuru takvimini takip edebilirsiniz." },
 ];
 
 export default function FAQ() {
