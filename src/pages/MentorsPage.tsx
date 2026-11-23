@@ -14,6 +14,7 @@ import emreGuzer from "@/assets/mentors/emre-guzer.jpg";
 import enginSatana from "@/assets/mentors/engin-satana.jpg";
 import erdemMumtazHacipasaoglu from "@/assets/mentors/erdem-mumtaz-hacipasaoglu.jpg";
 import erkanBahce from "@/assets/mentors/erkan-bahce.jpg";
+import fatmaBetulAksogan from "@/assets/mentors/fatma-betul-aksogan.jpg";
 import furkanOzpolat from "@/assets/mentors/furkan-ozpolat.jpg";
 import gokhanTuncel from "@/assets/mentors/gokhan-tuncel.jpg";
 import gonulKamali from "@/assets/mentors/gonul-kamali.jpg";
@@ -111,6 +112,11 @@ const mentors: Mentor[] = [
     role: "İnönü Üniversitesi, Akademisyen",
     linkedin: "https://www.linkedin.com/in/erkan-bahce-40892399/",
     photo: erkanBahce,
+  },
+  {
+    name: "Av. Dr. Fatma Betül Aksoğan",
+    role: "Aksoğan Hukuk Bürosu, Arabulucu Avukat",
+    photo: fatmaBetulAksogan,
   },
   {
     name: "Furkan Özpolat",
