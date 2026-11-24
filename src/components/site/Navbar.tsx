@@ -4,7 +4,6 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useLang } from "@/i18n/LanguageContext";
 import lion from "@/assets/logo-lion-tight.png";
-import { APPLICATIONS_OPEN } from "@/config/applications";
 
 type NavItem =
   | { key: "about" | "program" | "who" | "timeline" | "supporters" | "faq"; type: "anchor" }
@@ -88,11 +87,7 @@ export default function Navbar() {
 
         <div className="hidden xl:flex items-center gap-3">
           <Button asChild variant="default" className="bg-bronze-deep hover:bg-bronze-deep/90 text-white h-[47px] w-[149px] px-0 text-[17px] font-normal">
-            <Link to="/apply">
-              {APPLICATIONS_OPEN
-                ? <>{t.nav.apply} <ArrowRight className="ml-3 w-[18px] h-[18px]" strokeWidth={1.75} /></>
-                : t.nav.applyClosed}
-            </Link>
+            <Link to="/apply">{t.nav.apply} <ArrowRight className="ml-3 w-[18px] h-[18px]" strokeWidth={1.75} /></Link>
           </Button>
         </div>
 
@@ -111,7 +106,7 @@ export default function Navbar() {
             ))}
             <li className="pt-3">
               <Button asChild className="w-full bg-bronze-deep hover:bg-bronze-deep/90 text-white">
-                <Link to="/apply" onClick={() => setOpen(false)}>{APPLICATIONS_OPEN ? t.nav.apply : t.nav.applyClosed}</Link>
+                <Link to="/apply" onClick={() => setOpen(false)}>{t.nav.apply}</Link>
               </Button>
             </li>
           </ul>

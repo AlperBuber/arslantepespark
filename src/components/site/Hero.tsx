@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useLang } from "@/i18n/LanguageContext";
-import { APPLICATIONS_OPEN } from "@/config/applications";
 import heroIllustration from "@/assets/hero-illustration.webp";
 
 // Zemindeki baklavalar: maketten (1440×810) ölçülen konum, boyut ve renkler.
@@ -114,11 +113,7 @@ export default function Hero() {
             </p>
             <div className="mt-8 lg:mt-[29px] flex flex-wrap gap-5">
               <Button asChild size="lg" className="bg-bronze-deep text-white hover:bg-bronze-deep/90 h-14 lg:h-[57px] w-[220px] lg:w-[200px] xl:w-[220px] px-0 text-[19px] font-normal">
-                <Link to="/apply">
-                  {APPLICATIONS_OPEN
-                    ? <>{t.hero.cta1} <ArrowRight className="ml-3 w-5 h-5" strokeWidth={1.75} /></>
-                    : t.hero.cta1Closed}
-                </Link>
+                <Link to="/apply">{t.hero.cta1} <ArrowRight className="ml-3 w-5 h-5" strokeWidth={1.75} /></Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="bg-white border-2 border-navy text-navy hover:bg-navy/5 hover:text-navy h-14 lg:h-[57px] w-[235px] lg:w-[215px] xl:w-[235px] px-0 text-[19px] font-semibold">
                 <a href="#program">{t.hero.cta2}</a>
