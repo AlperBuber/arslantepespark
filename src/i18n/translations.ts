@@ -11,6 +11,7 @@ export const translations = {
       faq: "SSS",
       contact: "İletişim",
       apply: "Başvur",
+      applyClosed: "Başvuru Kapandı",
     },
     hero: {
       eyebrow: "Anadolu’nun Girişimcilik Programı",
@@ -19,6 +20,7 @@ export const translations = {
       tagline: ["Anadolu’dan doğan", "teknoloji ve inovasyon kıvılcımı."],
       subtitle: "Malatya merkezli, Anadolu’nun girişimcilerini destekleyen yoğun bir hızlandırma programı.",
       cta1: "Hemen Başvur",
+      cta1Closed: "Başvurular Kapandı",
       cta2: "Programı İncele",
       stats: [
         { value: "12 Hafta", label: "Yoğun Hızlandırma" },
@@ -40,6 +42,7 @@ export const translations = {
       faq: "FAQ",
       contact: "Contact",
       apply: "Apply Now",
+      applyClosed: "Applications Closed",
     },
     hero: {
       eyebrow: "Anatolia's Entrepreneurship Program",
@@ -47,6 +50,7 @@ export const translations = {
       tagline: ["The tech and innovation", "spark born in Anatolia."],
       subtitle: "A Malatya-based intensive acceleration program supporting Anatolia's entrepreneurs.",
       cta1: "Apply Now",
+      cta1Closed: "Applications Closed",
       cta2: "Explore Program",
       stats: [
         { value: "12 Weeks", label: "Intensive Acceleration" },

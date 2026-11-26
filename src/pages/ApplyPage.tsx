@@ -13,11 +13,14 @@ import {
   Trash2, 
   Download, 
   Home, 
-  AlertCircle 
+  AlertCircle,
+  CalendarX2,
+  Mail
 } from "lucide-react";
 import { toast } from "sonner";
 import logo from "@/assets/logo-full.png";
 import { supabase } from "@/lib/supabase.js";
+import { APPLICATIONS_OPEN } from "@/config/applications";
 
 const INITIAL_FORM_DATA = {
   startupName: "",
@@ -174,6 +177,77 @@ function CustomRadio({ label, checked, onChange }: CustomRadioProps) {
 }
 
 export default function ApplyPage() {
+  return APPLICATIONS_OPEN ? <ApplyForm /> : <ApplicationsClosed />;
+}
+
+function ApplicationsClosed() {
+  return (
+    <div className="min-h-screen bg-background relative flex flex-col selection:bg-bronze/20 selection:text-bronze">
+      <div className="absolute inset-0 filigree-bg pointer-events-none z-0" />
+
+      <header className="sticky top-0 z-40 bg-ivory/80 backdrop-blur-md border-b border-border shadow-soft">
+        <div className="container flex items-center justify-between h-16 md:h-20">
+          <Link to="/" className="flex items-center group">
+            <img src={logo} alt="Arslantepe Spark — Girişim Hızlandırma Programı" className="h-8 md:h-10 w-auto object-contain" width={463} height={93} />
+          </Link>
+          <Link
+            to="/"
+            className="inline-flex items-center gap-2 text-xs md:text-sm font-medium text-charcoal/70 hover:text-bronze transition-colors px-3 py-1.5 rounded hover:bg-charcoal/5"
+          >
+            <ArrowLeft className="w-4 h-4" /> Ana Sayfaya Dön
+          </Link>
+        </div>
+      </header>
+
+      <div className="container relative z-10 flex-1 py-8 md:py-12 max-w-6xl">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ type: "spring", damping: 20, stiffness: 100 }}
+          className="max-w-2xl mx-auto bg-card border border-border rounded-3xl p-8 md:p-12 shadow-elegant text-center relative overflow-hidden"
+        >
+          <div className="absolute top-0 inset-x-0 h-2 bg-gradient-bronze" />
+          <div className="flex justify-center mb-6">
+            <div className="w-20 h-20 bg-bronze/10 rounded-full flex items-center justify-center text-bronze border border-bronze/20 shadow-inner">
+              <CalendarX2 className="w-10 h-10" />
+            </div>
+          </div>
+          <span className="eyebrow mb-3">2026 Dönemi</span>
+          <h1 className="font-display text-3xl md:text-4xl text-charcoal font-semibold mb-4 leading-tight">
+            Başvurular Kapandı
+          </h1>
+          <p className="text-charcoal/75 text-sm md:text-base max-w-md mx-auto mb-8">
+            Arslantepe Spark 2026 dönemi başvuruları 26 Kasım 2026 itibarıyla sona ermiştir. Gösterdiğiniz yoğun ilgi için teşekkür ederiz.
+          </p>
+
+          <div className="text-left bg-secondary/30 rounded-2xl p-6 border border-border/50 max-w-md mx-auto mb-10 text-xs md:text-sm text-charcoal/80 space-y-2">
+            <h2 className="font-semibold text-charcoal mb-2">Süreç Nasıl İlerleyecek?</h2>
+            <p>1. Alınan başvurular uzman kurul tarafından değerlendiriliyor.</p>
+            <p>2. Programa katılacak girişimler 27 Kasım 2026'da belirlenecek.</p>
+            <p>3. Sonuçlar başvuru sahiplerine kurucu e-posta adresi üzerinden bildirilecek.</p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <a
+              href="mailto:info@bconnector.org"
+              className="inline-flex items-center justify-center gap-2 bg-secondary hover:bg-secondary/80 text-charcoal font-medium rounded px-6 py-3 border border-border transition-colors text-sm"
+            >
+              <Mail className="w-4 h-4" /> Bize Ulaşın
+            </a>
+            <Link
+              to="/"
+              className="inline-flex items-center justify-center gap-2 bg-charcoal hover:bg-charcoal/90 text-ivory font-medium rounded px-6 py-3 transition-colors text-sm shadow-soft"
+            >
+              <Home className="w-4 h-4" /> Ana Sayfaya Dön
+            </Link>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+}
+
+function ApplyForm() {
   const [currentStep, setCurrentStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStage, setSubmitStage] = useState(0);
